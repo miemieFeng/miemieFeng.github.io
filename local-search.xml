@@ -11,6 +11,18 @@
     <content type="html"><![CDATA[<blockquote><p>test</p></blockquote>]]></content>
     
     
+    <categories>
+      
+      <category>初始化博客</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>hexo</tag>
+      
+    </tags>
     
   </entry>
   
