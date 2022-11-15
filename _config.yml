@@ -102,7 +102,7 @@ theme: fluid
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  repo: git@github.com:miemieFeng/miemieFeng.github.io.git
+  repo: https://github.com/miemieFeng/miemieFeng.github.io.git
   type: 'git'
   repository: https://github.com/miemieFeng/miemieFeng.github.io.git
   branch: main
