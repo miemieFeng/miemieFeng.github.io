@@ -29,6 +29,31 @@
   
   
   <entry>
+    <title>hello</title>
+    <link href="/python%E6%89%93%E5%8C%85exe,%E5%B0%86%E5%86%B0%E5%A2%A9%E5%A2%A9%E9%80%81%E7%BB%99%E4%BD%A0%E7%88%B1%E7%9A%84%E4%BA%BA/"/>
+    <url>/python%E6%89%93%E5%8C%85exe,%E5%B0%86%E5%86%B0%E5%A2%A9%E5%A2%A9%E9%80%81%E7%BB%99%E4%BD%A0%E7%88%B1%E7%9A%84%E4%BA%BA/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>最近大家都有冰墩墩,抢不到就去github拉一个</p></blockquote><h3 id="一、拉项目（略）"><a href="#一、拉项目（略）" class="headerlink" title="一、拉项目（略）"></a>一、拉项目（略）</h3><h3 id="二、pip安装pyinstaller"><a href="#二、pip安装pyinstaller" class="headerlink" title="二、pip安装pyinstaller"></a>二、pip安装pyinstaller</h3><pre><code class="hljs">pip3 install pyinstaller</code></pre><h3 id="三、使用pyinstaller打包成exe发送给你爱的人"><a href="#三、使用pyinstaller打包成exe发送给你爱的人" class="headerlink" title="三、使用pyinstaller打包成exe发送给你爱的人"></a>三、使用pyinstaller打包成exe发送给你爱的人</h3><p>打包命令 </p><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs stylus">Pyinstaller -F setup<span class="hljs-selector-class">.py</span> 打包exe<br>Pyinstaller -F -w setup<span class="hljs-selector-class">.py</span> 不带控制台的打包<br>Pyinstaller -F -<span class="hljs-selector-tag">i</span> xx<span class="hljs-selector-class">.ico</span> setup<span class="hljs-selector-class">.py</span> 打包指定exe图标打包<br><br></code></pre></td></tr></table></figure><p><img src="https://fengbo.fun/upload/2022/02/b7701875be59fa6a2651cbab82b319b-fcc39472663d4237b693d39ede0bad43.png" alt="b7701875be59fa6a2651cbab82b319b.png"></p><h3 id="成果"><a href="#成果" class="headerlink" title="成果"></a>成果</h3><p><img src="https://fengbo.fun/upload/2022/02/image-5773bb8dbb3b4e5084dcd4affcd21a36.png" alt="image.png"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>初始化博客</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>hexo</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Hello World</title>
     <link href="/hello-world/"/>
     <url>/hello-world/</url>
