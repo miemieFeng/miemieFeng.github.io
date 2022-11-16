@@ -66,5 +66,30 @@
   
   
   
+  <entry>
+    <title>使用黑群晖搭建旁路由</title>
+    <link href="/%E4%BD%BF%E7%94%A8%E9%BB%91%E7%BE%A4%E6%99%96%E6%90%AD%E5%BB%BA%E6%97%81%E8%B7%AF%E7%94%B1/"/>
+    <url>/%E4%BD%BF%E7%94%A8%E9%BB%91%E7%BE%A4%E6%99%96%E6%90%AD%E5%BB%BA%E6%97%81%E8%B7%AF%E7%94%B1/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>家里购置了switch自然是需要全家富强才可以更舒适的使用</p></blockquote><h3 id="一、安装虚拟机套件"><a href="#一、安装虚拟机套件" class="headerlink" title="一、安装虚拟机套件"></a>一、安装虚拟机套件</h3><p><strong>这里我选择安装旧版虚拟机套件，因为新版需要vip才可以开启cpu兼容</strong><br><img src="https://fengbo.fun/upload/2022/02/image-602efa6a1b774c4397f317bbb091fcc0.png" alt="image.png">可以看到我这里安装了2.31版</p><h3 id="二、下载旁路由镜像"><a href="#二、下载旁路由镜像" class="headerlink" title="二、下载旁路由镜像"></a>二、下载旁路由镜像</h3><p><strong>这里我选择下载恩山大佬第一的镜像，下载地址<a href="https://openwrt.mpdn.fun:8443/">https://openwrt.mpdn.fun:8443</a></strong></p><h3 id="三、导入镜像"><a href="#三、导入镜像" class="headerlink" title="三、导入镜像"></a>三、导入镜像</h3><p>打开虚拟机软件，选择新增，导入pc镜像<img src="https://fengbo.fun/upload/2022/02/image-a8c710077bdb4e2a811005f9f5f00066.png" alt="image.png">等待上传完毕即可</p><h3 id="四、启动镜像"><a href="#四、启动镜像" class="headerlink" title="四、启动镜像"></a>四、启动镜像</h3><p>首先选择虚拟机-导入<br><img src="https://fengbo.fun/upload/2022/02/image-920f5e0b64a74c9fafea59048031f5d7.png" alt="image.png"><br>导入刚才上传的镜像<br>1、然后启动并连接。在跳出来的窗口界面输入命令，vi etc/config/network ，修改一下软路由的IP。<br>2、在option ipaddr后面把IP修改成为和主路由一个网段的，可以按 i 键进行修改，比如我设置成192.1168。1.10，修改完后按Esc退出，接着输入命令 ：wq ，保存刚才的修改。<br>3、再输入 passwd 修改一下密码，修改的时候密码不会显示，不用担心，输完按回车就行，要连续输入两次。<br>4、最后输入命令 reboot 进行重启就OK了。<br>5、在浏览器输入刚才咱们修改过的IP，这时候已经可以进入Openwrt的登陆界面了，填上自己设置的密码就可以进系统了</p><p><img src="https://fengbo.fun/upload/2022/02/image-7dae48cc949c458db41552c956c082d0.png" alt="image.png"></p><h3 id="五、Openwrt系统配置"><a href="#五、Openwrt系统配置" class="headerlink" title="五、Openwrt系统配置"></a>五、Openwrt系统配置</h3><p>系统装完了，要想正常使用还得配置一下，找到左侧菜单 网络—接口，选择LAN的接口进行修改。<br><img src="https://fengbo.fun/upload/2022/02/image-d3beeb8e2e2b472eb45608ebdd788278.png" alt="image.png"><br>网关和dns填自己的网关（忽略此接口处打上勾，不让旁路由提供DHCP服务，避免和主路由冲突。）<br><img src="https://fengbo.fun/upload/2022/02/image-aaaf9b8f291e47f88743f9a7f74e513e.png" alt="image.png"></p><h3 id="六、修改上网设备ip"><a href="#六、修改上网设备ip" class="headerlink" title="六、修改上网设备ip"></a>六、修改上网设备ip</h3><p>此时将上网设备的ip和dns改为我们旁路由的地址即可，我这里是改了小米路由器做二级路由</p><blockquote><p>此时连接了小米路由器的设备都可以通过旁路由来设置策略了</p></blockquote>]]></content>
+    
+    
+    <categories>
+      
+      <category>群晖</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>旁路由</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
   
 </search>
