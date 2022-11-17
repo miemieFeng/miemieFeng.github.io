@@ -16,12 +16,12 @@
   <meta name="author" content="冯咩咩">
   <meta name="keywords" content="">
   
-    <meta name="description" content="前段时间闲来无事,吧家里的旧笔记本改造成了黑群晖.开通内网穿透踩了很多坑,特此记录一下  frp分别有服务端(frps)和客户端(frpc) 一、下面先说服务端因为是第一次操作,所以没有使用docker管理.有时间一定要换成docker 1、首先下载frp（根据自己的系统选择）1wget https:&#x2F;&#x2F;github.com&#x2F;fatedier&#x2F;frp&#x2F;releases&#x2F;download&#x2F;v0.3">
+    <meta name="description" content="前段时间闲来无事，吧家里的旧笔记本改造成了黑群晖.  开通内网穿透踩了很多坑，特此记录一下  frp 分别有服务端 (frps) 和客户端 (frpc) # 一、下面先说服务端 因为是第一次操作，所以没有使用 docker 管理。有时间一定要换成 docker # 1、首先下载 frp（根据自己的系统选择） 1wget https:&#x2F;&#x2F;github.com&#x2F;fatedier&#x2F;frp&#x2F;releas">
 <meta property="og:type" content="article">
 <meta property="og:title" content="黑群晖frp内网穿透">
 <meta property="og:url" content="http://miemiefeng.github.io/%E9%BB%91%E7%BE%A4%E6%99%96frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/index.html">
 <meta property="og:site_name" content="七月的藏宝图">
-<meta property="og:description" content="前段时间闲来无事,吧家里的旧笔记本改造成了黑群晖.开通内网穿透踩了很多坑,特此记录一下  frp分别有服务端(frps)和客户端(frpc) 一、下面先说服务端因为是第一次操作,所以没有使用docker管理.有时间一定要换成docker 1、首先下载frp（根据自己的系统选择）1wget https:&#x2F;&#x2F;github.com&#x2F;fatedier&#x2F;frp&#x2F;releases&#x2F;download&#x2F;v0.3">
+<meta property="og:description" content="前段时间闲来无事，吧家里的旧笔记本改造成了黑群晖.  开通内网穿透踩了很多坑，特此记录一下  frp 分别有服务端 (frps) 和客户端 (frpc) # 一、下面先说服务端 因为是第一次操作，所以没有使用 docker 管理。有时间一定要换成 docker # 1、首先下载 frp（根据自己的系统选择） 1wget https:&#x2F;&#x2F;github.com&#x2F;fatedier&#x2F;frp&#x2F;releas">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/miemieFeng/blogImg/Blogs/20221116194700.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/miemieFeng/blogImg/Blogs/20221116194719.png">
@@ -277,37 +277,51 @@
               <div class="markdown-body">
                 
                 <blockquote>
-<p>前段时间闲来无事,吧家里的旧笔记本改造成了黑群晖.<br>开通内网穿透踩了很多坑,特此记录一下</p>
+<p>前段时间闲来无事，吧家里的旧笔记本改造成了黑群晖.<br>
+ 开通内网穿透踩了很多坑，特此记录一下</p>
 </blockquote>
-<p><strong>frp分别有服务端(frps)和客户端(frpc)</strong></p>
-<h2 id="一、下面先说服务端"><a href="#一、下面先说服务端" class="headerlink" title="一、下面先说服务端"></a>一、下面先说服务端</h2><p>因为是第一次操作,所以没有使用docker管理.有时间一定要换成docker</p>
-<h4 id="1、首先下载frp（根据自己的系统选择）"><a href="#1、首先下载frp（根据自己的系统选择）" class="headerlink" title="1、首先下载frp（根据自己的系统选择）"></a>1、首先下载frp（根据自己的系统选择）</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs language">wget https://github.com/fatedier/frp/releases/download/v0.33.0/frp_0.33.0_linux_amd64.tar.gz<br></code></pre></td></tr></table></figure>
-<h4 id="2、解压命令解压出来"><a href="#2、解压命令解压出来" class="headerlink" title="2、解压命令解压出来"></a>2、解压命令解压出来</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs language">tar -zxvf frp_0.33.0_linux_amd64.tar.gz<br></code></pre></td></tr></table></figure>
-<h4 id="3、进入-frp-目录"><a href="#3、进入-frp-目录" class="headerlink" title="3、进入 frp 目录"></a>3、进入 frp 目录</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs language">cd frp_0.33.0_linux_amd64<br></code></pre></td></tr></table></figure>
-<h4 id="4、配置服务器端文件"><a href="#4、配置服务器端文件" class="headerlink" title="4、配置服务器端文件"></a>4、配置服务器端文件</h4><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">vi</span> frps.ini<br><br></code></pre></td></tr></table></figure>
+<p><strong>frp 分别有服务端 (frps) 和客户端 (frpc)</strong></p>
+<h2 id="一-下面先说服务端"><a class="markdownIt-Anchor" href="#一-下面先说服务端">#</a> 一、下面先说服务端</h2>
+<p>因为是第一次操作，所以没有使用 docker 管理。有时间一定要换成 docker</p>
+<h4 id="1-首先下载frp根据自己的系统选择"><a class="markdownIt-Anchor" href="#1-首先下载frp根据自己的系统选择">#</a> 1、首先下载 frp（根据自己的系统选择）</h4>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs language">wget https://github.com/fatedier/frp/releases/download/v0.33.0/frp_0.33.0_linux_amd64.tar.gz<br></code></pre></td></tr></table></figure>
+<h4 id="2-解压命令解压出来"><a class="markdownIt-Anchor" href="#2-解压命令解压出来">#</a> 2、解压命令解压出来</h4>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs language">tar -zxvf frp_0.33.0_linux_amd64.tar.gz<br></code></pre></td></tr></table></figure>
+<h4 id="3-进入-frp-目录"><a class="markdownIt-Anchor" href="#3-进入-frp-目录">#</a> 3、进入 frp 目录</h4>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs language">cd frp_0.33.0_linux_amd64<br></code></pre></td></tr></table></figure>
+<h4 id="4-配置服务器端文件"><a class="markdownIt-Anchor" href="#4-配置服务器端文件">#</a> 4、配置服务器端文件</h4>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">vi</span> frps.ini<br><br></code></pre></td></tr></table></figure>
 <blockquote>
 <p>下面我把配置文件贴出来</p>
 </blockquote>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs language">[common]			#必填<br>bind_port = 1231  		#服务端口（可自定义）<br>vhost_http_port = 1232 		#访问端口（可自定义）<br>dashboard_port = 7500 		#dashboard 界面端口<br>dashboard_user = 账号		#登录 dashboard 用户名<br>dashboard_pwd = 密码		#登录 dashboard 密码<br>max_pool_count = 5		#最大连接池数量<br>authentication_timeout = 900	#超时验证时间<br>subdomain_host = 你的域名	#自定义二级域名（这里我用了我另一个备案的域名）<br>[ssh]<br>listen_port = 6000 		#访问端口<br>auth_token = 123321		#用户身份认证<br></code></pre></td></tr></table></figure>
-<h4 id="6、启动服务器端frps（测试启动）"><a href="#6、启动服务器端frps（测试启动）" class="headerlink" title="6、启动服务器端frps（测试启动）"></a>6、启动服务器端frps（测试启动）</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs language">./frps -c ./frps.ini<br></code></pre></td></tr></table></figure>
+<h4 id="6-启动服务器端frps测试启动"><a class="markdownIt-Anchor" href="#6-启动服务器端frps测试启动">#</a> 6、启动服务器端 frps（测试启动）</h4>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs language">./frps -c ./frps.ini<br></code></pre></td></tr></table></figure>
 <blockquote>
 <p>如果没有报错，那么服务端的操作暂时完毕</p>
 </blockquote>
 <p>二、开始说客户端（群晖端）</p>
 <blockquote>
-<p>一开始群晖也是使用了和上边一样的操作，只是配置文件不同，后来发现一个弊端—-&gt;每次重启群晖后，frpc不会自启动。或者因为不可抗力因素，frpc关闭了很不方便</p>
+<p>一开始群晖也是使用了和上边一样的操作，只是配置文件不同，后来发现一个弊端 ----&gt; 每次重启群晖后，frpc 不会自启动。或者因为不可抗力因素，frpc 关闭了很不方便</p>
 </blockquote>
-<h4 id="1、下载docker套件"><a href="#1、下载docker套件" class="headerlink" title="1、下载docker套件"></a>1、下载docker套件</h4><p>首先我们打开套件中心，搜索docker并安装。docker应该算是黑群晖必备套件我就不细说了</p>
-<h4 id="2、下载frp"><a href="#2、下载frp" class="headerlink" title="2、下载frp"></a>2、下载frp</h4><p><img src="https://cdn.jsdelivr.net/gh/miemieFeng/blogImg/Blogs/20221116194700.png" srcset="/img/loading.gif" lazyload alt="20221116194700"></p>
-<h3 id="2、启动容器"><a href="#2、启动容器" class="headerlink" title="2、启动容器"></a>2、启动容器</h3><p>映射frpc文件，容器内路径为<code>/frp/frpc.ini</code>，容器外路径随意，自己选</p>
-<h4 id="3、修改配置文件"><a href="#3、修改配置文件" class="headerlink" title="3、修改配置文件"></a>3、修改配置文件</h4><p>一定要注意，我们的配置文件是`frpc.ini，下面我把文件内容贴出来</p>
+<h4 id="1-下载docker套件"><a class="markdownIt-Anchor" href="#1-下载docker套件">#</a> 1、下载 docker 套件</h4>
+<p>首先我们打开套件中心，搜索 docker 并安装。docker 应该算是黑群晖必备套件我就不细说了</p>
+<h4 id="2-下载frp"><a class="markdownIt-Anchor" href="#2-下载frp">#</a> 2、下载 frp</h4>
+<p><img src="https://cdn.jsdelivr.net/gh/miemieFeng/blogImg/Blogs/20221116194700.png" srcset="/img/loading.gif" lazyload alt="20221116194700"></p>
+<h3 id="2-启动容器"><a class="markdownIt-Anchor" href="#2-启动容器">#</a> 2、启动容器</h3>
+<p>映射 frpc 文件，容器内路径为 <code>/frp/frpc.ini</code> ，容器外路径随意，自己选</p>
+<h4 id="3-修改配置文件"><a class="markdownIt-Anchor" href="#3-修改配置文件">#</a> 3、修改配置文件</h4>
+<p>一定要注意，我们的配置文件是 `frpc.ini，下面我把文件内容贴出来</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs language">[common]<br>server_addr = 服务端ip<br>server_port = 端口设置<br>auth_token = 随便设置<br>pool_count = 1<br>[ssh]<br>type = tcp<br>local_ip = 本地群晖ip<br>local_port = 22<br>remote_port = 6000<br>use_compression = true<br>use_encryption = true<br>[qh]			#如果有多个端口一定不能和下面的名字重复了<br>type = http<br>local_port = 5000<br>subdomain = qh		#这里一定是写你的二级域名前缀（坑点）<br>[ql]<br>type = http<br>local_port = 5700<br>subdomain = ql<br>[nl]<br>type = http<br>local_port = 5703<br>subdomain = nl<br>[sn]<br>type = http<br>local_port = 8181<br>subdomain = sn<br><br></code></pre></td></tr></table></figure>
-<h4 id="4、启动服务器端"><a href="#4、启动服务器端" class="headerlink" title="4、启动服务器端"></a>4、启动服务器端</h4><p>群晖启动服务端，进入高级设置，选择停止后重启，并且一定要选择使用和dockerhost相同网络</p>
+<h4 id="4-启动服务器端"><a class="markdownIt-Anchor" href="#4-启动服务器端">#</a> 4、启动服务器端</h4>
+<p>群晖启动服务端，进入高级设置，选择停止后重启，并且一定要选择使用和 dockerhost 相同网络</p>
 <blockquote>
-<p>此时如果容器没有无限容器那么说明已经是链接成功了，可以访问刚才自己配的地址去看，一定是域名加端口号访问。除非像我一样在服务端使用nginx分别反向代理</p>
+<p>此时如果容器没有无限容器那么说明已经是链接成功了，可以访问刚才自己配的地址去看，一定是域名加端口号访问。除非像我一样在服务端使用 nginx 分别反向代理</p>
 </blockquote>
-<h2 id="三、服务端frp后台运行"><a href="#三、服务端frp后台运行" class="headerlink" title="三、服务端frp后台运行"></a>三、服务端frp后台运行</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs language">nohup ./frps -c ./frps.ini &amp;<br></code></pre></td></tr></table></figure>
-<p>最后贴上成果<br><img src="https://cdn.jsdelivr.net/gh/miemieFeng/blogImg/Blogs/20221116194719.png" srcset="/img/loading.gif" lazyload alt="20221116194719"></p>
+<h2 id="三-服务端frp后台运行"><a class="markdownIt-Anchor" href="#三-服务端frp后台运行">#</a> 三、服务端 frp 后台运行</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs language">nohup ./frps -c ./frps.ini &amp;<br></code></pre></td></tr></table></figure>
+<p>最后贴上成果<br>
+<img src="https://cdn.jsdelivr.net/gh/miemieFeng/blogImg/Blogs/20221116194719.png" srcset="/img/loading.gif" lazyload alt="20221116194719"></p>
 
                 
               </div>
@@ -509,7 +523,8 @@
     <div class="footer-inner">
   
     <div class="footer-content">
-       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+      
+
     </div>
   
   

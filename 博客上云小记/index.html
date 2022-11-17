@@ -16,12 +16,12 @@
   <meta name="author" content="冯咩咩">
   <meta name="keywords" content="">
   
-    <meta name="description" content="一、服务器和域名 腾讯云轻量级服务器 腾讯云域名  服务器系统   Centos7  1、配置nginx使用云命令安装 1yum install -y nginx  启动服务器 12systemctl start nginxsystemctl enable nginx  2、配置服务器路由安装并启动服务器后，我们就完成了第一步，现在我们可以尝试使用自己的电脑去访问服务器的公网IP。可以发现，公网I">
+    <meta name="description" content="# 一、服务器和域名  腾讯云轻量级服务器 腾讯云域名  服务器系统    Centos7 # 1、配置 nginx 使用云命令安装 1yum install -y nginx 启动服务器 12systemctl start nginxsystemctl enable nginx # 2、配置服务器路由 安装并启动服务器后，我们就完成了第一步，现在我们可以尝试使用自己的电脑去访问服务器的公网 IP">
 <meta property="og:type" content="article">
 <meta property="og:title" content="博客上云小记">
 <meta property="og:url" content="http://miemiefeng.github.io/%E5%8D%9A%E5%AE%A2%E4%B8%8A%E4%BA%91%E5%B0%8F%E8%AE%B0/index.html">
 <meta property="og:site_name" content="七月的藏宝图">
-<meta property="og:description" content="一、服务器和域名 腾讯云轻量级服务器 腾讯云域名  服务器系统   Centos7  1、配置nginx使用云命令安装 1yum install -y nginx  启动服务器 12systemctl start nginxsystemctl enable nginx  2、配置服务器路由安装并启动服务器后，我们就完成了第一步，现在我们可以尝试使用自己的电脑去访问服务器的公网IP。可以发现，公网I">
+<meta property="og:description" content="# 一、服务器和域名  腾讯云轻量级服务器 腾讯云域名  服务器系统    Centos7 # 1、配置 nginx 使用云命令安装 1yum install -y nginx 启动服务器 12systemctl start nginxsystemctl enable nginx # 2、配置服务器路由 安装并启动服务器后，我们就完成了第一步，现在我们可以尝试使用自己的电脑去访问服务器的公网 IP">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-10-18T06:51:04.000Z">
 <meta property="article:modified_time" content="2022-11-16T12:17:16.232Z">
@@ -230,7 +230,7 @@
         
         
         
-          22 分钟
+          23 分钟
         
       </span>
     
@@ -273,103 +273,85 @@
             
               <div class="markdown-body">
                 
-                <h3 id="一、服务器和域名"><a href="#一、服务器和域名" class="headerlink" title="一、服务器和域名"></a>一、服务器和域名</h3><ul>
+                <h3 id="一-服务器和域名"><a class="markdownIt-Anchor" href="#一-服务器和域名">#</a> 一、服务器和域名</h3>
+<ul>
 <li>腾讯云轻量级服务器</li>
 <li>腾讯云域名</li>
 </ul>
-<p>服务器系统 <code>  Centos7</code> </p>
-<h5 id="1、配置nginx"><a href="#1、配置nginx" class="headerlink" title="1、配置nginx"></a>1、配置<code>nginx</code></h5><p>使用云命令安装</p>
+<p>服务器系统  <code>  Centos7</code></p>
+<h5 id="1-配置nginx"><a class="markdownIt-Anchor" href="#1-配置nginx">#</a> 1、配置 <code>nginx</code></h5>
+<p>使用云命令安装</p>
 <figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmake">yum <span class="hljs-keyword">install</span> -y nginx<br></code></pre></td></tr></table></figure>
-
 <p>启动服务器</p>
 <figure class="highlight nsis"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs nsis"><span class="hljs-params">system</span>ctl start nginx<br><span class="hljs-params">system</span>ctl enable nginx<br></code></pre></td></tr></table></figure>
-
-<h5 id="2、配置服务器路由"><a href="#2、配置服务器路由" class="headerlink" title="2、配置服务器路由"></a>2、配置服务器路由</h5><p>安装并启动服务器后，我们就完成了第一步，现在我们可以尝试使用自己的电脑去访问服务器的公网IP。可以发现，公网IP可以打开一个nginx的默认网页。这样，我们就成功了第一步。</p>
-<p>但我们实际上是想要让这个地址指向我们的博客，而不是nginx的默认网址，这就需要我们去配置nginx的配置文件。很多关于centOS的资料都是说配置位于etc/nginx/conf.d/ 下的dafault.conf 这个配置文件，但腾讯云和阿里云默认的库下载的是fedora版本的nginx，我们应该配置的是位于 etc/nginx/ 下的 nginx.conf 。</p>
-<p>打开<code>/etc/nginx/</code>目录下的<code>nginx.conf</code>文件<code>vi /etc/nginx/nginx.conf</code></p>
-<p>按i键进入编辑模式，编辑完成后按Esc键退出编辑模式，依次按 ：wq保存并退出，注意是先按：键，然后输入wq再按回车</p>
+<h5 id="2-配置服务器路由"><a class="markdownIt-Anchor" href="#2-配置服务器路由">#</a> 2、配置服务器路由</h5>
+<p>安装并启动服务器后，我们就完成了第一步，现在我们可以尝试使用自己的电脑去访问服务器的公网 IP。可以发现，公网 IP 可以打开一个 nginx 的默认网页。这样，我们就成功了第一步。</p>
+<p>但我们实际上是想要让这个地址指向我们的博客，而不是 nginx 的默认网址，这就需要我们去配置 nginx 的配置文件。很多关于 centOS 的资料都是说配置位于 etc/nginx/conf.d/ 下的 dafault.conf 这个配置文件，但腾讯云和阿里云默认的库下载的是 fedora 版本的 nginx，我们应该配置的是位于 etc/nginx/ 下的 nginx.conf 。</p>
+<p>打开 <code>/etc/nginx/</code>  目录下的 <code>nginx.conf</code>  文件 <code>vi /etc/nginx/nginx.conf</code></p>
+<p>按 i 键进入编辑模式，编辑完成后按 Esc 键退出编辑模式，依次按 ：wq 保存并退出，注意是先按：键，然后输入 wq 再按回车</p>
 <figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-section">server</span> &#123;<br>        <span class="hljs-attribute">listen</span>       <span class="hljs-number">80</span> default_server;<br>        <span class="hljs-attribute">listen</span>       [::]:<span class="hljs-number">80</span> default_server;<br>        <span class="hljs-attribute">server_name</span>  _;   <span class="hljs-comment">#把server_name后面的_换为自己的域名，没有域名可以先填公网ip</span><br>        <span class="hljs-attribute">root</span>         /home/hexo;       <span class="hljs-comment">#root后面改为git仓库目录</span><br>    <span class="hljs-comment"># Load configuration files for the default server block.</span><br>    <span class="hljs-attribute">include</span> /etc/nginx/default.d/<span class="hljs-regexp">*.conf</span>;<br><br>    <span class="hljs-section">location</span> / &#123;<br>    &#125;<br></code></pre></td></tr></table></figure>
-
-<h5 id="3、安装git"><a href="#3、安装git" class="headerlink" title="3、安装git"></a>3、安装git</h5><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmake">yum <span class="hljs-keyword">install</span> git<br></code></pre></td></tr></table></figure>
-
-<p>配置git用户</p>
+<h5 id="3-安装git"><a class="markdownIt-Anchor" href="#3-安装git">#</a> 3、安装 git</h5>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmake">yum <span class="hljs-keyword">install</span> git<br></code></pre></td></tr></table></figure>
+<p>配置 git 用户</p>
 <figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">adduser git</span><br></code></pre></td></tr></table></figure>
-
 <p>修改用户权限:</p>
 <figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs awk">chmod <span class="hljs-number">740</span> <span class="hljs-regexp">/etc/</span>sudoers<br>vi <span class="hljs-regexp">/etc/</span>sudoers<br></code></pre></td></tr></table></figure>
-
 <p>按向下键在文件中找到字段</p>
 <figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ada">root    <span class="hljs-keyword">ALL</span>=(<span class="hljs-keyword">ALL</span>)       <span class="hljs-keyword">ALL</span><br></code></pre></td></tr></table></figure>
-
-<p>按i进入编辑模式，在这一句下面加上一句</p>
+<p>按 i 进入编辑模式，在这一句下面加上一句</p>
 <figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ada">git     <span class="hljs-keyword">ALL</span>=(<span class="hljs-keyword">ALL</span>)       <span class="hljs-keyword">ALL</span><br></code></pre></td></tr></table></figure>
-
-<p>按Esc退出编辑，再按:wq回车保存退出后，然后将sudoers文件权限改回原样</p>
+<p>按 Esc 退出编辑，再按:wq 回车保存退出后，然后将 sudoers 文件权限改回原样</p>
 <figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">chmod <span class="hljs-number">400</span> <span class="hljs-regexp">/etc/</span>sudoers<br></code></pre></td></tr></table></figure>
-
-<p>设置git用户的密码</p>
+<p>设置 git 用户的密码</p>
 <figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">sudo passwd git</span><br></code></pre></td></tr></table></figure>
-
-<p>注意git用户的密码要在root用户下修改，否则会提示权限不足。下面操作也是一样，要注意是在git用户还是root用户</p>
-<p>切换到git用户，然后在~目录下创建.ssh文件夹</p>
+<p>注意 git 用户的密码要在 root 用户下修改，否则会提示权限不足。下面操作也是一样，要注意是在 git 用户还是 root 用户</p>
+<p>切换到 git 用户，然后在～目录下创建.ssh 文件夹</p>
 <figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs jboss-cli">su git<br><span class="hljs-keyword">cd</span> ~<br>mkdir <span class="hljs-string">.ssh</span><br><span class="hljs-keyword">cd</span> <span class="hljs-string">.ssh</span><br></code></pre></td></tr></table></figure>
-
 <p>生成公钥密钥文件</p>
 <figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">ssh-keygen</span><br></code></pre></td></tr></table></figure>
-
 <p>此时在目录下就会有两个文件，分别是</p>
 <figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">id_rsa</span> 和 id_rsa.pub<br></code></pre></td></tr></table></figure>
-
-<p>其中 <code>id_rsa.pub</code> 就是公钥文件，我们把它复制一份</p>
+<p>其中  <code>id_rsa.pub</code>  就是公钥文件，我们把它复制一份</p>
 <figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs avrasm"><span class="hljs-keyword">cp</span> id_rsa.pub authorized_keys<br></code></pre></td></tr></table></figure>
-
-<p>这样目录下就会有一个authorized_keys文件</p>
+<p>这样目录下就会有一个 authorized_keys 文件</p>
 <p>然后我们修改它的权限</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">chmod</span> 755 ~<br><span class="hljs-built_in">chmod</span> 700 ~/.ssh<br><span class="hljs-built_in">chmod</span> 600 ~/.ssh/authorized_keys<br></code></pre></td></tr></table></figure>
-
-<p>这样我们就可以在自己的电脑上打开cmd，使用ssh方式连接我们的云服务器</p>
+<p>这样我们就可以在自己的电脑上打开 cmd，使用 ssh 方式连接我们的云服务器</p>
 <figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs gherkin">ssh -v git<span class="hljs-meta">@公网ip</span>    <span class="hljs-comment">#@后面输入云服务器公网ip</span><br></code></pre></td></tr></table></figure>
-
 <p>输入密码，就能成功登录服务器</p>
-<p>接着我们创建一个git的仓库，并且新建一个post-receive文件，用来把提交到服务器仓库操作如下:</p>
+<p>接着我们创建一个 git 的仓库，并且新建一个 post-receive 文件，用来把提交到服务器仓库操作如下:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">su root<br><span class="hljs-built_in">cd</span> /home/git<br>git init --bare blog.git  <span class="hljs-comment">#在/home/git下创建新仓库blog.git</span><br><span class="hljs-built_in">chown</span> git:git -R blog.git <span class="hljs-comment">#给予git用户权限</span><br></code></pre></td></tr></table></figure>
-
-<p>在 <code>/home/hexo/blog.git</code> 下，有一个自动生成的 <code>hooks</code> 文件夹，我们创建一个 <code>post-receive</code>钩子，把提交到<code>/home/git/blog.git</code>仓库里的文件同步到<code>/home/hexo</code>中。</p>
+<p>在  <code>/home/hexo/blog.git</code>  下，有一个自动生成的  <code>hooks</code>  文件夹，我们创建一个  <code>post-receive</code>  钩子，把提交到 <code>/home/git/blog.git</code>  仓库里的文件同步到 <code>/home/hexo</code>  中。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> blog.git/hooks<br>vim post-receive<br></code></pre></td></tr></table></figure>
-
-<p>在<code>post-receive</code>中输入</p>
+<p>在 <code>post-receive</code>  中输入</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-meta">#!/bin/bash </span><br> git --work-tree=/home/hexo --git-dir=/home/git/blog.git checkout -f<br></code></pre></td></tr></table></figure>
-
 <p>保存退出后授予该文件可执行权限</p>
 <figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">chmod +x <span class="hljs-regexp">/home/gi</span>t<span class="hljs-regexp">/blog.git/</span>hooks/post-receive<br></code></pre></td></tr></table></figure>
-
-<h3 id="二、关于本地主机的操作"><a href="#二、关于本地主机的操作" class="headerlink" title="二、关于本地主机的操作"></a>二、关于本地主机的操作</h3><h4 id="1、安裝hexo"><a href="#1、安裝hexo" class="headerlink" title="1、安裝hexo"></a>1、安裝hexo</h4><p>由于使用npm直接下载会有很多人遇到卡顿的问题(国外服务器)，所以我们要做的第一步工作是将npm换成淘宝的服务器。cmd输入下面的命令：</p>
+<h3 id="二-关于本地主机的操作"><a class="markdownIt-Anchor" href="#二-关于本地主机的操作">#</a> 二、关于本地主机的操作</h3>
+<h4 id="1-安裝hexo"><a class="markdownIt-Anchor" href="#1-安裝hexo">#</a> 1、安裝 hexo</h4>
+<p>由于使用 npm 直接下载会有很多人遇到卡顿的问题 (国外服务器)，所以我们要做的第一步工作是将 npm 换成淘宝的服务器。cmd 输入下面的命令：</p>
 <figure class="highlight tcl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs tcl">npm config <span class="hljs-keyword">set</span> <span class="hljs-keyword">registry</span> https://<span class="hljs-keyword">registry</span>.npm.taobao.org<br><span class="hljs-comment"># 然后安装cnpm</span><br>npm install -g cnpm --<span class="hljs-keyword">registry</span>=https://<span class="hljs-keyword">registry</span>.npm.taobao.org<br></code></pre></td></tr></table></figure>
-
 <p>接下来就直接安装 hexo</p>
 <figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs avrasm">cnpm install -g hexo-<span class="hljs-keyword">cli</span><br></code></pre></td></tr></table></figure>
-
-<p>然后我们选一个目录用来初始化博客<br>例如D:/Blog</p>
+<p>然后我们选一个目录用来初始化博客<br>
+例如 D:/Blog</p>
 <figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs avrasm"><span class="hljs-symbol">D:</span><br>cd Blog<br>hexo init<br></code></pre></td></tr></table></figure>
-
 <p>执行成功后安装两个插件</p>
 <figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cmake">npm <span class="hljs-keyword">install</span> hexo-deployer-git --save<br>npm <span class="hljs-keyword">install</span> hexo-server<br></code></pre></td></tr></table></figure>
-
 <p>之后我们就可以在自己的本机上查看自己的博客了</p>
 <figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">hexo g</span><br><span class="hljs-attribute">hexo s</span><br></code></pre></td></tr></table></figure>
-
-<h4 id="2、配置服務"><a href="#2、配置服務" class="headerlink" title="2、配置服務"></a>2、配置服務</h4><p>在刚才生成博客的目录下，找到<code>_config.yml</code>，打开它。</p>
-<p>找到deploy 做如下配置，注意deploy：下面几行一定要缩进两格</p>
+<h4 id="2-配置服務"><a class="markdownIt-Anchor" href="#2-配置服務">#</a> 2、配置服務</h4>
+<p>在刚才生成博客的目录下，找到 <code>_config.yml</code> ，打开它。</p>
+<p>找到 deploy 做如下配置，注意 deploy：下面几行一定要缩进两格</p>
 <figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs dts"><span class="hljs-symbol">deploy:</span><br><span class="hljs-symbol">  type:</span> git<br><span class="hljs-symbol">  repo:</span> root@服务器仓库位置   <span class="hljs-meta">#@后输入 服务器公网IP:/home/git/blog.git       </span><br><span class="hljs-symbol">branch:</span> master <br></code></pre></td></tr></table></figure>
-
 <p>保存退出</p>
-<p>在服务器上重新运行nginx服务器<br><code>nginx -s reload</code></p>
-<p>注意每次修改配置文件按后都要重启nginx使之生效</p>
+<p>在服务器上重新运行 nginx 服务器<br>
+ <code>nginx -s reload</code></p>
+<p>注意每次修改配置文件按后都要重启 nginx 使之生效</p>
 <p>然后尝试写一篇文章并且发布到服务器上</p>
 <figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs verilog">hexo <span class="hljs-keyword">new</span> <span class="hljs-string">&quot;Hello My First Blog&quot;</span><br>hexo clean &amp;&amp; hexo <span class="hljs-keyword">generate</span> --deploy<br></code></pre></td></tr></table></figure>
-
-<p> 打开本地博客目录，会发现deploy_git目录下有了Hello My First Blog文件夹，里面是个简单的index.html文件。</p>
-<p> 在服务器的home/hexo/2020/12/17目录下可以发现也有个Hello My First Blog文件，这说明文件上传成功。</p>
+<p>打开本地博客目录，会发现 deploy_git 目录下有了 Hello My First Blog 文件夹，里面是个简单的 index.html 文件。</p>
+<p>在服务器的 home/hexo/2020/12/17 目录下可以发现也有个 Hello My First Blog 文件，这说明文件上传成功。</p>
 
                 
               </div>
@@ -572,7 +554,8 @@
     <div class="footer-inner">
   
     <div class="footer-content">
-       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+      
+
     </div>
   
   

@@ -16,12 +16,12 @@
   <meta name="author" content="冯咩咩">
   <meta name="keywords" content="">
   
-    <meta name="description" content="正好要做一个文章管理,记录一下遇到的坑  1.引入富文本编辑器 12345678var layedit &#x3D; layui.layedit;layedit.set(&amp;#123;	uploadImage: &amp;#123;		url: &amp;#x27;&#x2F;v1&#x2F;openApi&#x2F;uploadImage&amp;#x27; &#x2F;&#x2F;接口url		,type: &amp;#x27;&amp;#x27; &#x2F;&#x2F;默认post	&amp;#125;&amp;#125;">
+    <meta name="description" content="正好要做一个文章管理，记录一下遇到的坑  1. 引入富文本编辑器 12345678var layedit &#x3D; layui.layedit;layedit.set(&amp;#123;	uploadImage: &amp;#123;		url: &amp;#x27;&#x2F;v1&#x2F;openApi&#x2F;uploadImage&amp;#x27; &#x2F;&#x2F;接口url		,type: &amp;#x27;&amp;#x27; &#x2F;&#x2F;默认post	&amp;#125;&amp;#125">
 <meta property="og:type" content="article">
 <meta property="og:title" content="layui使用富文本编辑器并回显">
 <meta property="og:url" content="http://miemiefeng.github.io/layui%E4%BD%BF%E7%94%A8%E5%AF%8C%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8%E5%B9%B6%E5%9B%9E%E6%98%BE/index.html">
 <meta property="og:site_name" content="七月的藏宝图">
-<meta property="og:description" content="正好要做一个文章管理,记录一下遇到的坑  1.引入富文本编辑器 12345678var layedit &#x3D; layui.layedit;layedit.set(&amp;#123;	uploadImage: &amp;#123;		url: &amp;#x27;&#x2F;v1&#x2F;openApi&#x2F;uploadImage&amp;#x27; &#x2F;&#x2F;接口url		,type: &amp;#x27;&amp;#x27; &#x2F;&#x2F;默认post	&amp;#125;&amp;#125;">
+<meta property="og:description" content="正好要做一个文章管理，记录一下遇到的坑  1. 引入富文本编辑器 12345678var layedit &#x3D; layui.layedit;layedit.set(&amp;#123;	uploadImage: &amp;#123;		url: &amp;#x27;&#x2F;v1&#x2F;openApi&#x2F;uploadImage&amp;#x27; &#x2F;&#x2F;接口url		,type: &amp;#x27;&amp;#x27; &#x2F;&#x2F;默认post	&amp;#125;&amp;#125">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/miemieFeng/blogImg/Blogs/20221116193413.png">
 <meta property="article:published_time" content="2022-01-21T08:34:39.000Z">
@@ -276,20 +276,20 @@
               <div class="markdown-body">
                 
                 <blockquote>
-<p>正好要做一个文章管理,记录一下遇到的坑</p>
+<p>正好要做一个文章管理，记录一下遇到的坑</p>
 </blockquote>
-<p>1.引入富文本编辑器</p>
+<p>1. 引入富文本编辑器</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs language">var layedit = layui.layedit;<br>layedit.set(&#123;<br>	uploadImage: &#123;<br>		url: &#x27;/v1/openApi/uploadImage&#x27; //接口url<br>		,type: &#x27;&#x27; //默认post<br>	&#125;<br>&#125;);<br>var index = layedit.build(&#x27;demo&#x27;);<br></code></pre></td></tr></table></figure>
-
 <blockquote>
 <p>这里我接入了图片上传</p>
 </blockquote>
 <p><strong>图片上传需要定义好接口</strong></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs language">&#123;<br>  &quot;code&quot;: 0 //0表示成功，其它失败<br>  ,&quot;msg&quot;: &quot;&quot; //提示信息 //一般上传失败后返回<br>  ,&quot;data&quot;: &#123;<br>    &quot;src&quot;: &quot;图片路径&quot;<br>    ,&quot;title&quot;: &quot;图片名称&quot; //可选<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-<p>2.富文本编辑器回显</p>
+<p>2. 富文本编辑器回显</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs language">&lt;textarea id=&quot;demo&quot; style=&quot;display: none;&quot; name=&quot;article&quot; autocomplete=&quot;off&quot; placeholder=&quot;内容&quot; th:text=&quot;*&#123;article&#125;&quot; &gt;&lt;/textarea&gt;<br></code></pre></td></tr></table></figure>
-<p>这里我使用了th:text</p>
-<p>3.最终效果<br><img src="https://cdn.jsdelivr.net/gh/miemieFeng/blogImg/Blogs/20221116193413.png" srcset="/img/loading.gif" lazyload alt="20221116193413"></p>
+<p>这里我使用了 th:text</p>
+<p>3. 最终效果<br>
+<img src="https://cdn.jsdelivr.net/gh/miemieFeng/blogImg/Blogs/20221116193413.png" srcset="/img/loading.gif" lazyload alt="20221116193413"></p>
 
                 
               </div>
@@ -491,7 +491,8 @@
     <div class="footer-inner">
   
     <div class="footer-content">
-       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+      
+
     </div>
   
   
