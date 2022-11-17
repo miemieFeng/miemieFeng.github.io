@@ -1,0 +1,18 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "咩咩君 • All posts by \"旁路由\" tag",
+    "description": "coding日常",
+    "home_page_url": "http://miemieFeng.github.io",
+    "items": [
+        {
+            "id": "http://miemiefeng.github.io/%E4%BD%BF%E7%94%A8%E9%BB%91%E7%BE%A4%E6%99%96%E6%90%AD%E5%BB%BA%E6%97%81%E8%B7%AF%E7%94%B1/",
+            "url": "http://miemiefeng.github.io/%E4%BD%BF%E7%94%A8%E9%BB%91%E7%BE%A4%E6%99%96%E6%90%AD%E5%BB%BA%E6%97%81%E8%B7%AF%E7%94%B1/",
+            "title": "使用黑群晖搭建旁路由",
+            "date_published": "2022-02-09T01:41:28.000Z",
+            "content_html": "<blockquote>\n<p>家里购置了 switch 自然是需要全家富强才可以更舒适的使用</p>\n</blockquote>\n<h3 id=\"一-安装虚拟机套件\"><a class=\"markdownIt-Anchor\" href=\"#一-安装虚拟机套件\">#</a> 一、安装虚拟机套件</h3>\n<p><strong>这里我选择安装旧版虚拟机套件，因为新版需要 vip 才可以开启 cpu 兼容</strong><br>\n<img data-src=\"https://cdn.jsdelivr.net/gh/miemieFeng/blogImg/Blogs/image-602efa6a1b774c4397f317bbb091fcc0.png\" alt=\"image-602efa6a1b774c4397f317bbb091fcc0\"><br>\n 可以看到我这里安装了 2.31 版</p>\n<h3 id=\"二-下载旁路由镜像\"><a class=\"markdownIt-Anchor\" href=\"#二-下载旁路由镜像\">#</a> 二、下载旁路由镜像</h3>\n<p><strong>这里我选择下载恩山大佬第一的镜像，下载地址 https://openwrt.mpdn.fun:8443</strong></p>\n<h3 id=\"三-导入镜像\"><a class=\"markdownIt-Anchor\" href=\"#三-导入镜像\">#</a> 三、导入镜像</h3>\n<p>打开虚拟机软件，选择新增，导入 pc 镜像<img data-src=\"https://cdn.jsdelivr.net/gh/miemieFeng/blogImg/Blogs/20221116192456.png\" alt=\"20221116192456\"> 等待上传完毕即可</p>\n<h3 id=\"四-启动镜像\"><a class=\"markdownIt-Anchor\" href=\"#四-启动镜像\">#</a> 四、启动镜像</h3>\n<p>首先选择虚拟机 - 导入<br>\n<img data-src=\"https://cdn.jsdelivr.net/gh/miemieFeng/blogImg/Blogs/20221116192548.png\" alt=\"20221116192548\"><br>\n 导入刚才上传的镜像<br>\n 1、然后启动并连接。在跳出来的窗口界面输入命令，vi etc/config/network ，修改一下软路由的 IP。<br>\n2、在 option ipaddr 后面把 IP 修改成为和主路由一个网段的，可以按 i 键进行修改，比如我设置成 192.1168。1.10，修改完后按 Esc 退出，接着输入命令 ：wq ，保存刚才的修改。<br>\n3、再输入 passwd 修改一下密码，修改的时候密码不会显示，不用担心，输完按回车就行，要连续输入两次。<br>\n4、最后输入命令 reboot 进行重启就 OK 了。<br>\n5、在浏览器输入刚才咱们修改过的 IP，这时候已经可以进入 Openwrt 的登陆界面了，填上自己设置的密码就可以进系统了</p>\n<p><img data-src=\"https://cdn.jsdelivr.net/gh/miemieFeng/blogImg/Blogs/20221116192621.png\" alt=\"20221116192621\"></p>\n<h3 id=\"五-openwrt系统配置\"><a class=\"markdownIt-Anchor\" href=\"#五-openwrt系统配置\">#</a> 五、Openwrt 系统配置</h3>\n<p>系统装完了，要想正常使用还得配置一下，找到左侧菜单 网络 — 接口，选择 LAN 的接口进行修改。<br>\n<img data-src=\"https://cdn.jsdelivr.net/gh/miemieFeng/blogImg/Blogs/20221116192643.png\" alt=\"20221116192643\"><br>\n 网关和 dns 填自己的网关（忽略此接口处打上勾，不让旁路由提供 DHCP 服务，避免和主路由冲突。）<br>\n<img data-src=\"https://cdn.jsdelivr.net/gh/miemieFeng/blogImg/Blogs/20221116192705.png\" alt=\"20221116192705\"></p>\n<h3 id=\"六-修改上网设备ip\"><a class=\"markdownIt-Anchor\" href=\"#六-修改上网设备ip\">#</a> 六、修改上网设备 ip</h3>\n<p>此时将上网设备的 ip 和 dns 改为我们旁路由的地址即可，我这里是改了小米路由器做二级路由</p>\n<blockquote>\n<p>此时连接了小米路由器的设备都可以通过旁路由来设置策略了</p>\n</blockquote>\n",
+            "tags": [
+                "旁路由"
+            ]
+        }
+    ]
+}

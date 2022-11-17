@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>咩咩君 • Posts by &#34;python&#34; tag</title>
+        <link>http://miemieFeng.github.io</link>
+        <description>coding日常</description>
+        <language>zh-CN</language>
+        <pubDate>Thu, 10 Feb 2022 11:35:02 +0800</pubDate>
+        <lastBuildDate>Thu, 10 Feb 2022 11:35:02 +0800</lastBuildDate>
+        <category>前端</category>
+        <category>git</category>
+        <category>java</category>
+        <category>springboot</category>
+        <category>后端</category>
+        <category>nginx</category>
+        <category>旁路由</category>
+        <category>服务器</category>
+        <category>hexo</category>
+        <category>game</category>
+        <category>cron插件</category>
+        <category>群晖</category>
+        <category>python</category>
+        <item>
+            <guid isPermalink="true">http://miemiefeng.github.io/python%E6%89%93%E5%8C%85exe,%E5%B0%86%E5%86%B0%E5%A2%A9%E5%A2%A9%E9%80%81%E7%BB%99%E4%BD%A0%E7%88%B1%E7%9A%84%E4%BA%BA/</guid>
+            <title>python打包exe,将冰墩墩送给你爱的人</title>
+            <link>http://miemiefeng.github.io/python%E6%89%93%E5%8C%85exe,%E5%B0%86%E5%86%B0%E5%A2%A9%E5%A2%A9%E9%80%81%E7%BB%99%E4%BD%A0%E7%88%B1%E7%9A%84%E4%BA%BA/</link>
+            <category>python</category>
+            <pubDate>Thu, 10 Feb 2022 11:35:02 +0800</pubDate>
+            <description><![CDATA[ &lt;blockquote&gt;
+&lt;p&gt;最近大家都有冰墩墩，抢不到就去 github 拉一个&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;一-拉项目略&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#一-拉项目略&#34;&gt;#&lt;/a&gt; 一、拉项目（略）&lt;/h3&gt;
+&lt;h3 id=&#34;二-pip安装pyinstaller&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#二-pip安装pyinstaller&#34;&gt;#&lt;/a&gt; 二、pip 安装 pyinstaller&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;pip3 install pyinstaller
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;三-使用pyinstaller打包成exe发送给你爱的人&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#三-使用pyinstaller打包成exe发送给你爱的人&#34;&gt;#&lt;/a&gt; 三、使用 pyinstaller 打包成 exe 发送给你爱的人&lt;/h3&gt;
+&lt;p&gt;打包命令&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;Pyinstaller -F setup.py 打包exe&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;Pyinstaller -F -w setup.py 不带控制台的打包&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;Pyinstaller -F -i xx.ico setup.py 打包指定exe图标打包&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://47.108.248.23:8090/upload/2022/02/b7701875be59fa6a2651cbab82b319b-fcc39472663d4237b693d39ede0bad43.png&#34; alt=&#34;b7701875be59fa6a2651cbab82b319b.png&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;成果&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#成果&#34;&gt;#&lt;/a&gt; 成果&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://47.108.248.23:8090/upload/2022/02/image-5773bb8dbb3b4e5084dcd4affcd21a36.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

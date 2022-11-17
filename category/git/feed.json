@@ -1,0 +1,18 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "咩咩君 • All posts by \"git\" category",
+    "description": "coding日常",
+    "home_page_url": "http://miemieFeng.github.io",
+    "items": [
+        {
+            "id": "http://miemiefeng.github.io/%20%E8%A7%A3%E5%86%B3%20fatal:%20unable%20to%20connect%20to%20gitee.com:%20gitee.com[0:%20180.97.125.228]:%20errno=Unknown%20error/",
+            "url": "http://miemiefeng.github.io/%20%E8%A7%A3%E5%86%B3%20fatal:%20unable%20to%20connect%20to%20gitee.com:%20gitee.com[0:%20180.97.125.228]:%20errno=Unknown%20error/",
+            "title": "解决fatal:unable to connect to gitee.com:gitee.com[0:180.97.125.228]:errno=Unknown error",
+            "date_published": "2022-01-10T03:35:51.000Z",
+            "content_html": "<p>fatal: unable to connect to <span class=\"exturl\" data-url=\"aHR0cDovL2dpdGVlLmNvbQ==\">gitee.com</span>:<br>\n<span class=\"exturl\" data-url=\"aHR0cDovL2dpdGVlLmNvbQ==\">gitee.com</span>[0: 180.97.125.228]: errno=Unknown error</p>\n<p>直接找到.gitconfig 文件，把这几个配置删掉，就可以正常 push 了</p>\n<p>[url “<span class=\"exturl\" data-url=\"bWFpbHRvOmdpdEBnaXRodWIuY29t\">git@github.com</span>”]<br>\ninsteadOf = <span class=\"exturl\" data-url=\"aHR0cHM6Ly9naXRodWIuY29tLzo=\">https://github.com/:</span><br>\n[url “git://”]<br>\ninsteadOf = https://<br>\n[url “https://”]<br>\ninsteadOf = git://</p>\n<blockquote>\n<p>百度好久都找不到 焦躁哦</p>\n</blockquote>\n",
+            "tags": [
+                "git"
+            ]
+        }
+    ]
+}

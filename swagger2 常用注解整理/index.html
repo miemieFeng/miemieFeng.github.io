@@ -1,291 +1,186 @@
 
 
+
+
 <!DOCTYPE html>
-<html lang="zh-CN" data-default-color-scheme=auto>
-
-
-
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/icon.png">
-  <link rel="icon" href="/img/icon.png">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  
-  <meta name="theme-color" content="#2f4154">
-  <meta name="author" content="冯咩咩">
-  <meta name="keywords" content="">
-  
-    <meta name="description" content="最近用到 swagger 想着整理一下常用注解 (只能说是真的不好用，写一堆注解头痛)  123456789101112131415161718192021222324252627282930313233343536@Api：用在请求的类上，表示对类的说明    tags&#x3D;&quot;说明该类的作用，可以在UI界面上看到的注解&quot;    value&#x3D;&quot;该参数没什么意义，在UI界">
-<meta property="og:type" content="article">
-<meta property="og:title" content="swagger2 常用注解整理">
-<meta property="og:url" content="http://miemiefeng.github.io/swagger2%20%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3%E6%95%B4%E7%90%86/index.html">
-<meta property="og:site_name" content="七月的藏宝图">
-<meta property="og:description" content="最近用到 swagger 想着整理一下常用注解 (只能说是真的不好用，写一堆注解头痛)  123456789101112131415161718192021222324252627282930313233343536@Api：用在请求的类上，表示对类的说明    tags&#x3D;&quot;说明该类的作用，可以在UI界面上看到的注解&quot;    value&#x3D;&quot;该参数没什么意义，在UI界">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-01-25T09:18:32.000Z">
-<meta property="article:modified_time" content="2022-11-16T11:32:13.131Z">
-<meta property="article:author" content="冯咩咩">
-<meta property="article:tag" content="后端">
-<meta name="twitter:card" content="summary_large_image">
-  
-  
-  
-  <title>swagger2 常用注解整理 - 七月的藏宝图</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
 
-  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
 
 
+<link rel="alternate" type="application/rss+xml" title="咩咩君" href="http://miemiefeng.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="咩咩君" href="http://miemiefeng.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="咩咩君" href="http://miemiefeng.github.io/feed.json" />
 
-  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
-
-  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
-
-
-
-<!-- 主题依赖的图标库，不要自行修改 -->
-<!-- Do not modify the link that theme dependent icons -->
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
-
-
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
-
-
-<link  rel="stylesheet" href="/css/main.css" />
-
-
-  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
-  
-    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
-  
-
-
-
-
-  <script id="fluid-configs">
-    var Fluid = window.Fluid || {};
-    Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"miemiefeng.github.io","root":"/","version":"1.9.3","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
-
-    if (CONFIG.web_analytics.follow_dnt) {
-      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
-      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
-    }
-  </script>
-  <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
-  
-
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
 
   
+  <meta name="keywords" content="后端" />
+
+
+<link rel="canonical" href="http://miemiefeng.github.io/swagger2%20%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3%E6%95%B4%E7%90%86/">
+
+
+
+  <title>
+swagger2 常用注解整理 - swagger |
+咩咩君 = 咩咩君</title>
 <meta name="generator" content="Hexo 5.4.2"></head>
-
-
-<body>
-  
-
-  <header>
-    
-
-<div class="header-inner" style="height: 70vh;">
-  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
-  <div class="container">
-    <a class="navbar-brand" href="/">
-      <strong>咩咩君</strong>
-    </a>
-
-    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="animated-icon"><span></span><span></span><span></span></div>
-    </button>
-
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto text-center">
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/">
-                <i class="iconfont icon-home-fill"></i>
-                首页
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/archives/">
-                <i class="iconfont icon-archive-fill"></i>
-                归档
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/categories/">
-                <i class="iconfont icon-category-fill"></i>
-                分类
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/tags/">
-                <i class="iconfont icon-tags-fill"></i>
-                标签
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/about/">
-                <i class="iconfont icon-user-fill"></i>
-                关于
-              </a>
-            </li>
-          
-        
-        
-          <li class="nav-item" id="search-btn">
-            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
-            </a>
-          </li>
-          
-        
-        
-          <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
-                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
-          </li>
-        
-      </ul>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
     </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">swagger2 常用注解整理
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2022-01-25 17:18:32">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2022-01-25T17:18:32+08:00">2022-01-25</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>3.1k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>3 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">咩咩君</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
   </div>
 </nav>
 
-  
-
-<div id="banner" class="banner" parallax=true
-     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
-  <div class="full-bg-img">
-    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-      <div class="banner-text text-center fade-in-up">
-        <div class="h2">
-          
-            <span id="subtitle" data-typed-text="swagger2 常用注解整理"></span>
-          
-        </div>
-
-        
-          
-  <div class="mt-3">
-    
-    
-      <span class="post-meta">
-        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-01-25 17:18" pubdate>
-          2022年1月25日 下午
-        </time>
-      </span>
-    
-  </div>
-
-  <div class="mt-1">
-    
-      <span class="post-meta mr-2">
-        <i class="iconfont icon-chart"></i>
-        
-          3.1k 字
-        
-      </span>
-    
-
-    
-      <span class="post-meta mr-2">
-        <i class="iconfont icon-clock-fill"></i>
-        
-        
-        
-          26 分钟
-        
-      </span>
-    
-
-    
-    
-  </div>
-
-
-        
       </div>
-
-      
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giclflwv2aj20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giclg5ms2rj20zk0m8u0x.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giph4fomxoj20zk0m8axp.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipexj2jgzj20zk0m8b09.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipesx5fdwj20zk0m81kx.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipesrnqv3j20zk0m8ava.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
     </div>
-  </div>
-</div>
-
-</div>
-
-  </header>
-
-  <main>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
     
-      
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/swagger/" itemprop="item" rel="index" title="分类于 swagger"><span itemprop="name">swagger</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
 
-<div class="container-fluid nopadding-x">
-  <div class="row nomargin-x">
-    <div class="side-col d-none d-lg-block col-lg-2">
-      
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="http://miemiefeng.github.io/swagger2%20%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3%E6%95%B4%E7%90%86/">
 
-    </div>
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="冯咩咩">
+    <meta itemprop="description" content=", coding日常">
+  </span>
 
-    <div class="col-lg-8 nopadding-x-md">
-      <div class="container nopadding-x-md" id="board-ctn">
-        <div id="board">
-          <article class="post-content mx-auto">
-            <!-- SEO header -->
-            <h1 style="display: none">swagger2 常用注解整理</h1>
-            
-            
-              <div class="markdown-body">
-                
-                <blockquote>
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="咩咩君">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <blockquote>
 <p>最近用到 swagger 想着整理一下常用注解 (只能说是真的不好用，写一堆注解头痛)</p>
 </blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><code class="hljs language">@Api：用在请求的类上，表示对类的说明<br>    tags=&quot;说明该类的作用，可以在UI界面上看到的注解&quot;<br>    value=&quot;该参数没什么意义，在UI界面上也看到，所以不需要配置&quot;<br> <br> <br>@ApiOperation：用在请求的方法上，说明方法的用途、作用<br>    value=&quot;说明方法的用途、作用&quot;<br>    notes=&quot;方法的备注说明&quot;<br> <br> <br>@ApiImplicitParams：用在请求的方法上，表示一组参数说明<br>    @ApiImplicitParam：用在@ApiImplicitParams注解中，指定一个请求参数的各个方面<br>        name：参数名<br>        value：参数的汉字说明、解释<br>        required：参数是否必须传<br>        paramType：参数放在哪个地方<br>            · header --&gt; 请求参数的获取：@RequestHeader<br>            · query --&gt; 请求参数的获取：@RequestParam<br>            · path（用于restful接口）--&gt; 请求参数的获取：@PathVariable<br>            · body（不常用）<br>            · form（不常用）    <br>        dataType：参数类型，默认String，其它值dataType=&quot;Integer&quot;       <br>        defaultValue：参数的默认值<br> <br> <br>@ApiResponses：用在请求的方法上，表示一组响应<br>    @ApiResponse：用在@ApiResponses中，一般用于表达一个错误的响应信息<br>        code：数字，例如400<br>        message：信息，例如&quot;请求参数没填好&quot;<br>        response：抛出异常的类<br> <br> <br>@ApiModel：用于响应类上，表示一个返回响应数据的信息<br>            （这种一般用在post创建的时候，使用@RequestBody这样的场景，<br>            请求参数无法使用@ApiImplicitParam注解进行描述的时候）<br>    @ApiModelProperty：用在属性上，描述响应类的属性<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">@Api：用在请求的类上，表示对类的说明</span><br><span class="line">    tags=&quot;说明该类的作用，可以在UI界面上看到的注解&quot;</span><br><span class="line">    value=&quot;该参数没什么意义，在UI界面上也看到，所以不需要配置&quot;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">@ApiOperation：用在请求的方法上，说明方法的用途、作用</span><br><span class="line">    value=&quot;说明方法的用途、作用&quot;</span><br><span class="line">    notes=&quot;方法的备注说明&quot;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">@ApiImplicitParams：用在请求的方法上，表示一组参数说明</span><br><span class="line">    @ApiImplicitParam：用在@ApiImplicitParams注解中，指定一个请求参数的各个方面</span><br><span class="line">        name：参数名</span><br><span class="line">        value：参数的汉字说明、解释</span><br><span class="line">        required：参数是否必须传</span><br><span class="line">        paramType：参数放在哪个地方</span><br><span class="line">            · header --&gt; 请求参数的获取：@RequestHeader</span><br><span class="line">            · query --&gt; 请求参数的获取：@RequestParam</span><br><span class="line">            · path（用于restful接口）--&gt; 请求参数的获取：@PathVariable</span><br><span class="line">            · body（不常用）</span><br><span class="line">            · form（不常用）    </span><br><span class="line">        dataType：参数类型，默认String，其它值dataType=&quot;Integer&quot;       </span><br><span class="line">        defaultValue：参数的默认值</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">@ApiResponses：用在请求的方法上，表示一组响应</span><br><span class="line">    @ApiResponse：用在@ApiResponses中，一般用于表达一个错误的响应信息</span><br><span class="line">        code：数字，例如400</span><br><span class="line">        message：信息，例如&quot;请求参数没填好&quot;</span><br><span class="line">        response：抛出异常的类</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">@ApiModel：用于响应类上，表示一个返回响应数据的信息</span><br><span class="line">            （这种一般用在post创建的时候，使用@RequestBody这样的场景，</span><br><span class="line">            请求参数无法使用@ApiImplicitParam注解进行描述的时候）</span><br><span class="line">    @ApiModelProperty：用在属性上，描述响应类的属性</span><br></pre></td></tr></table></figure>
 <h3 id="1-api"><a class="markdownIt-Anchor" href="#1-api">#</a> 1、@Api</h3>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs language">@Api(tags=&quot;APP用户注册Controller&quot;)<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@Api(tags=&quot;APP用户注册Controller&quot;)</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>@Api：用在请求的类上，说明该类的作用<br>
  tags=“说明该类的作用”<br>
 value=“该参数没什么意义，所以不需要配置”</p>
 </blockquote>
 <h3 id="2-apioperation"><a class="markdownIt-Anchor" href="#2-apioperation">#</a> 2、@ApiOperation</h3>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs language">@ApiOperation(value=&quot;用户登录&quot;,notes=&quot;填写账号密码都是必填&quot;)<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@ApiOperation(value=&quot;用户登录&quot;,notes=&quot;填写账号密码都是必填&quot;)</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>@ApiOperation：用在请求的方法上，说明方法的作用<br>
  @ApiOperation：“用在请求的方法上，说明方法的作用”<br>
@@ -293,7 +188,7 @@ value=“说明方法的作用”<br>
 notes=“方法的备注说明”</p>
 </blockquote>
 <h3 id="3-apiimplicitparams和apiimplicitparam这两个用的比较多"><a class="markdownIt-Anchor" href="#3-apiimplicitparams和apiimplicitparam这两个用的比较多">#</a> <strong>3、@ApiImplicitParams 和 @ApiImplicitParam</strong> 这两个用的比较多</h3>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs language">@ApiImplicitParams(&#123;<br>    @ApiImplicitParam(name=&quot;mobile&quot;,value=&quot;手机号&quot;,required=true,paramType=&quot;form&quot;),<br>    @ApiImplicitParam(name=&quot;password&quot;,value=&quot;密码&quot;,required=true,paramType=&quot;form&quot;),<br>    @ApiImplicitParam(name=&quot;age&quot;,value=&quot;年龄&quot;,required=true,paramType=&quot;form&quot;,dataType=&quot;Integer&quot;)<br>&#125;)<br>//@ApiImplicitParams：用在请求的方法上，包含一组参数说明<br>     //@ApiImplicitParams：用在请求的方法上，包含一组参数说明<br>     //@ApiImplicitParam：用在 @ApiImplicitParams 注解中，指定一个请求参数的配置信息       <br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@ApiImplicitParams(&#123;</span><br><span class="line">    @ApiImplicitParam(name=&quot;mobile&quot;,value=&quot;手机号&quot;,required=true,paramType=&quot;form&quot;),</span><br><span class="line">    @ApiImplicitParam(name=&quot;password&quot;,value=&quot;密码&quot;,required=true,paramType=&quot;form&quot;),</span><br><span class="line">    @ApiImplicitParam(name=&quot;age&quot;,value=&quot;年龄&quot;,required=true,paramType=&quot;form&quot;,dataType=&quot;Integer&quot;)</span><br><span class="line">&#125;)</span><br><span class="line">//@ApiImplicitParams：用在请求的方法上，包含一组参数说明</span><br><span class="line">     //@ApiImplicitParams：用在请求的方法上，包含一组参数说明</span><br><span class="line">     //@ApiImplicitParam：用在 @ApiImplicitParams 注解中，指定一个请求参数的配置信息       </span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>@ApiImplicitParams：用在请求的方法上，包含一组参数说明<br>
  @ApiImplicitParams：用在请求的方法上，包含一组参数说明<br>
@@ -312,7 +207,7 @@ defaultValue：参数的默认值</p>
 </blockquote>
 <h3 id="4-apiresponses"><a class="markdownIt-Anchor" href="#4-apiresponses">#</a> 4、@ApiResponses</h3>
 <p>@ApiOperation (value = “select1 请求”,notes = “多个参数，多种的查询参数类型”)</p>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs less"><span class="hljs-variable">@ApiResponses</span>(&#123;<br>    <span class="hljs-variable">@ApiResponse</span>(code=<span class="hljs-number">400</span>,message=<span class="hljs-string">&quot;请求参数没填好&quot;</span>),<br>    <span class="hljs-variable">@ApiResponse</span>(code=<span class="hljs-number">404</span>,message=<span class="hljs-string">&quot;请求路径没有或页面跳转路径不对&quot;</span>)<br>&#125;)<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@ApiResponses(&#123;</span><br><span class="line">    @ApiResponse(code=400,message=&quot;请求参数没填好&quot;),</span><br><span class="line">    @ApiResponse(code=404,message=&quot;请求路径没有或页面跳转路径不对&quot;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>@ApiResponses：用于请求的方法上，表示一组响应<br>
  @ApiResponses：用于请求的方法上，表示一组响应<br>
@@ -322,7 +217,7 @@ message：信息，例如 &quot;请求参数没填好&quot;<br>
 response：抛出异常的类</p>
 </blockquote>
 <h3 id="5-apimodel"><a class="markdownIt-Anchor" href="#5-apimodel">#</a> 5、@ApiModel</h3>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs language">@ApiModel(description= &quot;返回响应数据&quot;)<br>public class RestMessage implements Serializable&#123;<br> <br>    @ApiModelProperty(value = &quot;是否成功&quot;)<br>    private boolean success=true;<br>    @ApiModelProperty(value = &quot;返回对象&quot;)<br>    private Object data;<br>    @ApiModelProperty(value = &quot;错误编号&quot;)<br>    private Integer errCode;<br>    @ApiModelProperty(value = &quot;错误信息&quot;)<br>    private String message;<br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">@ApiModel(description= &quot;返回响应数据&quot;)</span><br><span class="line">public class RestMessage implements Serializable&#123;</span><br><span class="line"> </span><br><span class="line">    @ApiModelProperty(value = &quot;是否成功&quot;)</span><br><span class="line">    private boolean success=true;</span><br><span class="line">    @ApiModelProperty(value = &quot;返回对象&quot;)</span><br><span class="line">    private Object data;</span><br><span class="line">    @ApiModelProperty(value = &quot;错误编号&quot;)</span><br><span class="line">    private Integer errCode;</span><br><span class="line">    @ApiModelProperty(value = &quot;错误信息&quot;)</span><br><span class="line">    private String message;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>@ApiModel：用于响应类上，表示一个返回响应数据的信息<br>
  @ApiModel：用于响应类上，表示一个返回响应数据的信息<br>
@@ -331,370 +226,382 @@ response：抛出异常的类</p>
 @ApiModelProperty：用在属性上，描述响应类的属性</p>
 </blockquote>
 
-                
-              </div>
-            
-            <hr/>
-            <div>
-              <div class="post-metas my-3">
-  
-    <div class="post-meta mr-3 d-flex align-items-center">
-      <i class="iconfont icon-category"></i>
-      
+      <div class="tags">
+          <a href="/tags/%E5%90%8E%E7%AB%AF/" rel="tag"><i class="ic i-tag"></i> 后端</a>
+      </div>
+  </div>
 
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/swagger/" class="category-chain-item">swagger</a>
-  
-  
+   <footer>
 
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2022-11-16 19:32:13" itemprop="dateModified" datetime="2022-11-16T19:32:13+08:00">2022-11-16</time>
+  </span>
+  <span id="swagger2 常用注解整理/" class="item leancloud_visitors" data-flag-title="swagger2 常用注解整理" title="阅读次数">
+      <span class="icon">
+        <i class="ic i-eye"></i>
       </span>
-    
-  
-</span>
-
-    </div>
-  
-  
-    <div class="post-meta">
-      <i class="iconfont icon-tags"></i>
-      
-        <a href="/tags/%E5%90%8E%E7%AB%AF/">#后端</a>
-      
-    </div>
-  
+      <span class="text">阅读次数</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">次</span>
+  </span>
 </div>
 
-
-              
-  
-
-  <div class="license-box my-3">
-    <div class="license-title">
-      <div>swagger2 常用注解整理</div>
-      <div>http://miemiefeng.github.io/swagger2 常用注解整理/</div>
-    </div>
-    <div class="license-meta">
       
-        <div class="license-meta-item">
-          <div>作者</div>
-          <div>冯咩咩</div>
-        </div>
-      
-      
-        <div class="license-meta-item license-meta-date">
-          <div>发布于</div>
-          <div>2022年1月25日</div>
-        </div>
-      
-      
-      
-        <div class="license-meta-item">
-          <div>许可协议</div>
-          <div>
-            
-              
-              
-                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
-                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
-                    <i class="iconfont icon-by"></i>
-                  </span>
-                </a>
-              
-            
-          </div>
-        </div>
-      
-    </div>
-    <div class="license-icon iconfont"></div>
-  </div>
-
-
-
-              
-                <div class="post-prevnext my-3">
-                  <article class="post-prev col-6">
-                    
-                    
-                      <a href="/%E4%BD%BF%E7%94%A8%E9%BB%91%E7%BE%A4%E6%99%96%E6%90%AD%E5%BB%BA%E6%97%81%E8%B7%AF%E7%94%B1/" title="使用黑群晖搭建旁路由">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">使用黑群晖搭建旁路由</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
-                  </article>
-                  <article class="post-next col-6">
-                    
-                    
-                      <a href="/layui%E4%BD%BF%E7%94%A8%E5%AF%8C%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8%E5%B9%B6%E5%9B%9E%E6%98%BE/" title="layui使用富文本编辑器并回显">
-                        <span class="hidden-mobile">layui使用富文本编辑器并回显</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
-                    
-                  </article>
-                </div>
-              
-            </div>
-
-            
-          </article>
-        </div>
-      </div>
-    </div>
-
-    <div class="side-col d-none d-lg-block col-lg-2">
-      
-  <aside class="sidebar" style="margin-left: -1rem">
-    <div id="toc">
-  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
-  <div class="toc-body" id="toc-body"></div>
-</div>
-
-
-
-  </aside>
-
-
-    </div>
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
   </div>
 </div>
 
-
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-
-
-
-
-    
-
-    
-      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
-        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
-      </a>
-    
-
-    
-      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
-        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
-        </div>
-        <div class="list-group" id="local-search-result"></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-    
-
-    
-  </main>
-
-  <footer>
-    <div class="footer-inner">
-  
-    <div class="footer-content">
       
 
-    </div>
-  
-  
-  
-  
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>冯咩咩 <i class="ic i-at"><em>@</em></i>咩咩君
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="http://miemiefeng.github.io/swagger2%20%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3%E6%95%B4%E7%90%86/" title="swagger2 常用注解整理">http://miemiefeng.github.io/swagger2 常用注解整理/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
 </div>
 
   </footer>
 
-  <!-- Scripts -->
+</article>
+
+  </div>
   
-  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
-  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
 
-  <script>
-    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
-    NProgress.start()
-    window.addEventListener('load', function() {
-      NProgress.done();
-    })
-  </script>
-
-
-<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
-<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="/js/events.js" ></script>
-<script  src="/js/plugins.js" ></script>
-
-
-  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
-  <script>
-    (function (window, document) {
-      var typing = Fluid.plugins.typing;
-      var subtitle = document.getElementById('subtitle');
-      if (!subtitle || !typing) {
-        return;
-      }
-      var text = subtitle.getAttribute('data-typed-text');
+<div class="post-nav">
+    <div class="item left">
       
-        typing(text);
+
+  <a href="/layui%E4%BD%BF%E7%94%A8%E5%AF%8C%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8%E5%B9%B6%E5%9B%9E%E6%98%BE/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva4.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicli3sbvtj20zk0m8x6p.jpg" title="layui使用富文本编辑器并回显">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> layui</span>
+  <h3>layui使用富文本编辑器并回显</h3>
+  </a>
+
+    </div>
+    <div class="item right">
       
-    })(window, document);
-  </script>
 
+  <a href="/%E4%BD%BF%E7%94%A8%E9%BB%91%E7%BE%A4%E6%99%96%E6%90%AD%E5%BB%BA%E6%97%81%E8%B7%AF%E7%94%B1/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva4.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giph4lm9i7j20zk0m84qp.jpg" title="使用黑群晖搭建旁路由">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 群晖</span>
+  <h3>使用黑群晖搭建旁路由</h3>
+  </a>
 
-
-
-  
-    <script  src="/js/img-lazyload.js" ></script>
-  
-
-
-
+    </div>
+</div>
 
   
-<script>
-  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
-    var toc = jQuery('#toc');
-    if (toc.length === 0 || !window.tocbot) { return; }
-    var boardCtn = jQuery('#board-ctn');
-    var boardTop = boardCtn.offset().top;
+  <div class="wrap" id="comments"></div>
 
-    window.tocbot.init(Object.assign({
-      tocSelector     : '#toc-body',
-      contentSelector : '.markdown-body',
-      linkClass       : 'tocbot-link',
-      activeLinkClass : 'tocbot-active-link',
-      listClass       : 'tocbot-list',
-      isCollapsedClass: 'tocbot-is-collapsed',
-      collapsibleClass: 'tocbot-is-collapsible',
-      scrollSmooth    : true,
-      includeTitleTags: true,
-      headingsOffset  : -boardTop,
-    }, CONFIG.toc));
-    if (toc.find('.toc-list-item').length > 0) {
-      toc.css('visibility', 'visible');
-    }
 
-    Fluid.events.registerRefreshCallback(function() {
-      if ('tocbot' in window) {
-        tocbot.refresh();
-        var toc = jQuery('#toc');
-        if (toc.length === 0 || !tocbot) {
-          return;
-        }
-        if (toc.find('.toc-list-item').length > 0) {
-          toc.css('visibility', 'visible');
-        }
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-api"><span class="toc-number">1.</span> <span class="toc-text"> 1、@Api</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-apioperation"><span class="toc-number">2.</span> <span class="toc-text"> 2、@ApiOperation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-apiimplicitparams%E5%92%8Capiimplicitparam%E8%BF%99%E4%B8%A4%E4%B8%AA%E7%94%A8%E7%9A%84%E6%AF%94%E8%BE%83%E5%A4%9A"><span class="toc-number">3.</span> <span class="toc-text"> 3、@ApiImplicitParams 和 @ApiImplicitParam 这两个用的比较多</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-apiresponses"><span class="toc-number">4.</span> <span class="toc-text"> 4、@ApiResponses</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-apimodel"><span class="toc-number">5.</span> <span class="toc-text"> 5、@ApiModel</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li class="active"><a href="/swagger2%20%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3%E6%95%B4%E7%90%86/" rel="bookmark" title="swagger2 常用注解整理">swagger2 常用注解整理</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="冯咩咩"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">冯咩咩</p>
+  <div class="description" itemprop="description">coding日常</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">15</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">16</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">13</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL21pZW1pZUZlbmc=" title="https:&#x2F;&#x2F;github.com&#x2F;miemieFeng"><i class="ic i-github"></i></span>
+      <span class="exturl item weibo" data-url="aHR0cHM6Ly93ZWliby5jb20vdS81NDQyNDYzNTY3" title="https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;5442463567"><i class="ic i-weibo"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/layui%E4%BD%BF%E7%94%A8%E5%AF%8C%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8%E5%B9%B6%E5%9B%9E%E6%98%BE/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/%E4%BD%BF%E7%94%A8%E9%BB%91%E7%BE%A4%E6%99%96%E6%90%AD%E5%BB%BA%E6%97%81%E8%B7%AF%E7%94%B1/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/layui/" title="分类于 layui">layui</a>
+</div>
+
+    <span><a href="/layui%E4%BD%BF%E7%94%A8%E5%AF%8C%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8%E5%B9%B6%E5%9B%9E%E6%98%BE/" title="layui使用富文本编辑器并回显">layui使用富文本编辑器并回显</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/NGINX/" title="分类于 NGINX">NGINX</a>
+</div>
+
+    <span><a href="/%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6nginx%E6%8A%A5%E9%94%99(413%20Request%20Entity%20Too%20Large)/" title="上传文件nginx报错(413 Request Entity Too Large)">上传文件nginx报错(413 Request Entity Too Large)</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%BE%A4%E6%99%96/" title="分类于 群晖">群晖</a>
+</div>
+
+    <span><a href="/%E4%BD%BF%E7%94%A8%E9%BB%91%E7%BE%A4%E6%99%96%E6%90%AD%E5%BB%BA%E6%97%81%E8%B7%AF%E7%94%B1/" title="使用黑群晖搭建旁路由">使用黑群晖搭建旁路由</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/cron%E6%8F%92%E4%BB%B6/" title="分类于 cron插件">cron插件</a>
+</div>
+
+    <span><a href="/%E6%88%91%E7%9A%84%E4%BB%BB%E5%8A%A1%E6%97%B6%E9%97%B4%E6%88%91%E5%81%9A%E4%B8%BB(cron%E6%8F%92%E4%BB%B6)/" title="我的任务时间我做主(cron插件)">我的任务时间我做主(cron插件)</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/lol/" title="分类于 lol">lol</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/lol/pbe/" title="分类于 pbe">pbe</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/lol/pbe/game/" title="分类于 game">game</a>
+</div>
+
+    <span><a href="/%E8%8B%B1%E9%9B%84%E8%81%94%E7%9B%9F%E7%BE%8E%E6%B5%8B%E6%9C%8D%E6%B1%89%E5%8C%96/" title="英雄联盟美测服汉化">英雄联盟美测服汉化</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/swagger/" title="分类于 swagger">swagger</a>
+</div>
+
+    <span><a href="/swagger2%20%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3%E6%95%B4%E7%90%86/" title="swagger2 常用注解整理">swagger2 常用注解整理</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/layui/" title="分类于 layui">layui</a>
+</div>
+
+    <span><a href="/layui%E5%BC%95%E5%85%A5%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE%EF%BC%8C%E7%82%B9%E5%87%BB%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E4%BD%8D%E7%BD%AE/" title="layui引入百度地图，点击获取当前位置">layui引入百度地图，点击获取当前位置</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/hexo/" title="分类于 hexo">hexo</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/hexo/blog/" title="分类于 blog">blog</a>
+</div>
+
+    <span><a href="/%E5%8D%9A%E5%AE%A2%E4%B8%8A%E4%BA%91%E5%B0%8F%E8%AE%B0/" title="博客上云小记">博客上云小记</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%BE%A4%E6%99%96/" title="分类于 群晖">群晖</a>
+</div>
+
+    <span><a href="/%E8%A7%A3%E5%86%B3%E7%BE%A4%E8%BE%89%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E5%90%8Essh%E8%BF%9E%E6%8E%A5%E5%87%BA%E7%8E%B0connection%20is%20closed%20by%20foreign%20host/" title="解决 fatal:unable to connect to gitee.com:gitee.com[0:180.97.125.228]：errno&#x3D;Unknown error">解决 fatal:unable to connect to gitee.com:gitee.com[0:180.97.125.228]：errno=Unknown error</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/nginx/" title="分类于 nginx">nginx</a>
+</div>
+
+    <span><a href="/nginx%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/" title="nginx的安装与配置">nginx的安装与配置</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2022</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">冯咩咩 @ 咩咩君</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">38k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">34 分钟</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: 'swagger2 常用注解整理/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
       }
-    });
-  });
+    ]
+  };
 </script>
 
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
 
-  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
 
-  <script>Fluid.plugins.codeWidget();</script>
-
-
-  
-<script>
-  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
-    window.anchors.options = {
-      placement: CONFIG.anchorjs.placement,
-      visible  : CONFIG.anchorjs.visible
-    };
-    if (CONFIG.anchorjs.icon) {
-      window.anchors.options.icon = CONFIG.anchorjs.icon;
-    }
-    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
-    var res = [];
-    for (var item of el) {
-      res.push('.markdown-body > ' + item.trim());
-    }
-    if (CONFIG.anchorjs.placement === 'left') {
-      window.anchors.options.class = 'anchorjs-link-left';
-    }
-    window.anchors.add(res.join(', '));
-
-    Fluid.events.registerRefreshCallback(function() {
-      if ('anchors' in window) {
-        anchors.removeAll();
-        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
-        var res = [];
-        for (var item of el) {
-          res.push('.markdown-body > ' + item.trim());
-        }
-        if (CONFIG.anchorjs.placement === 'left') {
-          anchors.options.class = 'anchorjs-link-left';
-        }
-        anchors.add(res.join(', '));
-      }
-    });
-  });
-</script>
-
-
-  
-<script>
-  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
-    Fluid.plugins.fancyBox();
-  });
-</script>
-
-
-  <script>Fluid.plugins.imageCaption();</script>
-
-  <script  src="/js/local-search.js" ></script>
+<script src="/js/app.js?v=0.2.5"></script>
 
 
 
 
-
-<!-- 主题的启动项，将它保持在最底部 -->
-<!-- the boot of the theme, keep it at the bottom -->
-<script  src="/js/boot.js" ></script>
-
-
-  
-
-  <noscript>
-    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
-  </noscript>
 </body>
 </html>

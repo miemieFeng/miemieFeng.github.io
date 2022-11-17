@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>咩咩君 • Posts by &#34;cron插件&#34; tag</title>
+        <link>http://miemieFeng.github.io</link>
+        <description>coding日常</description>
+        <language>zh-CN</language>
+        <pubDate>Fri, 03 Dec 2021 14:04:40 +0800</pubDate>
+        <lastBuildDate>Fri, 03 Dec 2021 14:04:40 +0800</lastBuildDate>
+        <category>前端</category>
+        <category>git</category>
+        <category>java</category>
+        <category>springboot</category>
+        <category>后端</category>
+        <category>nginx</category>
+        <category>旁路由</category>
+        <category>服务器</category>
+        <category>hexo</category>
+        <category>game</category>
+        <category>cron插件</category>
+        <category>群晖</category>
+        <category>python</category>
+        <item>
+            <guid isPermalink="true">http://miemiefeng.github.io/%E6%88%91%E7%9A%84%E4%BB%BB%E5%8A%A1%E6%97%B6%E9%97%B4%E6%88%91%E5%81%9A%E4%B8%BB(cron%E6%8F%92%E4%BB%B6)/</guid>
+            <title>我的任务时间我做主(cron插件)</title>
+            <link>http://miemiefeng.github.io/%E6%88%91%E7%9A%84%E4%BB%BB%E5%8A%A1%E6%97%B6%E9%97%B4%E6%88%91%E5%81%9A%E4%B8%BB(cron%E6%8F%92%E4%BB%B6)/</link>
+            <category>cron插件</category>
+            <pubDate>Fri, 03 Dec 2021 14:04:40 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;先说一下插件怎么使用&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#先说一下插件怎么使用&#34;&gt;#&lt;/a&gt; 先说一下插件怎么使用&lt;/h2&gt;
+&lt;h3 id=&#34;1-点击浏览器右上角&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1-点击浏览器右上角&#34;&gt;#&lt;/a&gt; 1、点击浏览器右上角&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/miemieFeng/blogImg/Blogs/20221116194923.png&#34; alt=&#34;20221116194923&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;2-打开开发者模式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2-打开开发者模式&#34;&gt;#&lt;/a&gt; 2、打开开发者模式&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/miemieFeng/blogImg/Blogs/20221116194944.png&#34; alt=&#34;20221116194944&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;3-拖入下载的压缩包即可使用啦&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#3-拖入下载的压缩包即可使用啦&#34;&gt;#&lt;/a&gt; 3、拖入下载的压缩包即可使用啦&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;github 地址：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2p1aWxsZXRzL2Nyb24vcmVsZWFzZXM=&#34;&gt;cron 插件&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;下面说下浏览器插件的核心文件manifestjson&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#下面说下浏览器插件的核心文件manifestjson&#34;&gt;#&lt;/a&gt; 下面说下浏览器插件的核心文件（manifest.json）&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这个文件必须要有&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;34&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&amp;#123;	&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	// 清单文件的版本，这个必须写，而且必须是2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&amp;quot;manifest_version&amp;quot;: 2,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	// 插件的名称&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&amp;quot;name&amp;quot;: &amp;quot;Cron表达式生成&amp;quot;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	// 插件的版本&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&amp;quot;version&amp;quot;: &amp;quot;1.0.0&amp;quot;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	// 插件描述	&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&amp;quot;description&amp;quot;: &amp;quot;Cron表达式生成&amp;quot;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	// 图标，这里我偷懒全部用一个尺寸&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&amp;quot;icons&amp;quot;: &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		&amp;quot;16&amp;quot;: &amp;quot;img/icon.png&amp;quot;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		&amp;quot;48&amp;quot;: &amp;quot;img/icon.png&amp;quot;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		&amp;quot;128&amp;quot;: &amp;quot;img/icon.png&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	// 浏览器右上角图标设置，browser_action、page_action、app必须三选一&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&amp;quot;browser_action&amp;quot;: &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		&amp;quot;default_icon&amp;quot;: &amp;quot;img/icon.png&amp;quot;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		&amp;quot;default_title&amp;quot;: &amp;quot;Cron表达式生成&amp;quot;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		&amp;quot;default_popup&amp;quot;: &amp;quot;demo.html&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&amp;quot;options_ui&amp;quot;: &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		&amp;quot;page&amp;quot;: &amp;quot;demo.html&amp;quot;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		// 添加一些默认的样式，推荐使用&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		&amp;quot;chrome_style&amp;quot;: true&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	//权限申请&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&amp;quot;permissions&amp;quot;: [&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	],&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	//插件主页&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&amp;quot;homepage_url&amp;quot;: &amp;quot;http://47.108.248.23:8090/&amp;quot;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>咩咩君 • Posts by &#34;pbe&#34; category</title>
+        <link>http://miemieFeng.github.io</link>
+        <description>coding日常</description>
+        <language>zh-CN</language>
+        <pubDate>Mon, 01 Nov 2021 13:10:21 +0800</pubDate>
+        <lastBuildDate>Mon, 01 Nov 2021 13:10:21 +0800</lastBuildDate>
+        <category>前端</category>
+        <category>git</category>
+        <category>java</category>
+        <category>springboot</category>
+        <category>后端</category>
+        <category>nginx</category>
+        <category>旁路由</category>
+        <category>服务器</category>
+        <category>hexo</category>
+        <category>game</category>
+        <category>cron插件</category>
+        <category>群晖</category>
+        <category>python</category>
+        <item>
+            <guid isPermalink="true">http://miemiefeng.github.io/%E8%8B%B1%E9%9B%84%E8%81%94%E7%9B%9F%E7%BE%8E%E6%B5%8B%E6%9C%8D%E6%B1%89%E5%8C%96/</guid>
+            <title>英雄联盟美测服汉化</title>
+            <link>http://miemiefeng.github.io/%E8%8B%B1%E9%9B%84%E8%81%94%E7%9B%9F%E7%BE%8E%E6%B5%8B%E6%9C%8D%E6%B1%89%E5%8C%96/</link>
+            <category>game</category>
+            <pubDate>Mon, 01 Nov 2021 13:10:21 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;第一步：首先第一步我们进入到 PBE 的原始文件夹里，找到 LOLPBE 的打开程序，然后右键发送桌面快捷方式&lt;/p&gt;
+&lt;p&gt;第二步：我们到桌面 右键属性 打开快捷方式&lt;/p&gt;
+&lt;p&gt;第三步，我们在目标后面添加：&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;--locale=zh_CN &lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;记住加个空格&lt;/p&gt;
+&lt;p class=&#34;note note-primary&#34;&gt;更改完成后会重新下载一些东西&lt;/p&gt; ]]></description>
+        </item>
+    </channel>
+</rss>

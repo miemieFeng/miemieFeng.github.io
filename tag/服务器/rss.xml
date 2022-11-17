@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>咩咩君 • Posts by &#34;服务器&#34; tag</title>
+        <link>http://miemieFeng.github.io</link>
+        <description>coding日常</description>
+        <language>zh-CN</language>
+        <pubDate>Wed, 22 Dec 2021 13:15:55 +0800</pubDate>
+        <lastBuildDate>Wed, 22 Dec 2021 13:15:55 +0800</lastBuildDate>
+        <category>前端</category>
+        <category>git</category>
+        <category>java</category>
+        <category>springboot</category>
+        <category>后端</category>
+        <category>nginx</category>
+        <category>旁路由</category>
+        <category>服务器</category>
+        <category>hexo</category>
+        <category>game</category>
+        <category>cron插件</category>
+        <category>群晖</category>
+        <category>python</category>
+        <item>
+            <guid isPermalink="true">http://miemiefeng.github.io/%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6nginx%E6%8A%A5%E9%94%99(413%20Request%20Entity%20Too%20Large)/</guid>
+            <title>上传文件nginx报错(413 Request Entity Too Large)</title>
+            <link>http://miemiefeng.github.io/%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6nginx%E6%8A%A5%E9%94%99(413%20Request%20Entity%20Too%20Large)/</link>
+            <category>服务器</category>
+            <pubDate>Wed, 22 Dec 2021 13:15:55 +0800</pubDate>
+            <description><![CDATA[ &lt;blockquote&gt;
+&lt;p&gt;部署舔狗日记的时候发现，字体文件太大无法上传.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这可能是由于 Nginx 的上传大小限制所导致的。&lt;br&gt;
+可以在 Nginx 的配置文件下的 http 节点加入 client_max_body_size 1024m&lt;br&gt;
+ 就解决了&lt;br&gt;
+&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/miemieFeng/blogImg/Blogs/20221116194510.png&#34; alt=&#34;20221116194510&#34;&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

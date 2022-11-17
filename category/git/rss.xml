@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>咩咩君 • Posts by &#34;git&#34; category</title>
+        <link>http://miemieFeng.github.io</link>
+        <description>coding日常</description>
+        <language>zh-CN</language>
+        <pubDate>Mon, 10 Jan 2022 11:35:51 +0800</pubDate>
+        <lastBuildDate>Mon, 10 Jan 2022 11:35:51 +0800</lastBuildDate>
+        <category>前端</category>
+        <category>git</category>
+        <category>java</category>
+        <category>springboot</category>
+        <category>后端</category>
+        <category>nginx</category>
+        <category>旁路由</category>
+        <category>服务器</category>
+        <category>hexo</category>
+        <category>game</category>
+        <category>cron插件</category>
+        <category>群晖</category>
+        <category>python</category>
+        <item>
+            <guid isPermalink="true">http://miemiefeng.github.io/%20%E8%A7%A3%E5%86%B3%20fatal:%20unable%20to%20connect%20to%20gitee.com:%20gitee.com[0:%20180.97.125.228]:%20errno=Unknown%20error/</guid>
+            <title>解决fatal:unable to connect to gitee.com:gitee.com[0:180.97.125.228]:errno=Unknown error</title>
+            <link>http://miemiefeng.github.io/%20%E8%A7%A3%E5%86%B3%20fatal:%20unable%20to%20connect%20to%20gitee.com:%20gitee.com[0:%20180.97.125.228]:%20errno=Unknown%20error/</link>
+            <category>git</category>
+            <pubDate>Mon, 10 Jan 2022 11:35:51 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;fatal: unable to connect to &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2dpdGVlLmNvbQ==&#34;&gt;gitee.com&lt;/span&gt;:&lt;br&gt;
+&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2dpdGVlLmNvbQ==&#34;&gt;gitee.com&lt;/span&gt;[0: 180.97.125.228]: errno=Unknown error&lt;/p&gt;
+&lt;p&gt;直接找到.gitconfig 文件，把这几个配置删掉，就可以正常 push 了&lt;/p&gt;
+&lt;p&gt;[url “&lt;span class=&#34;exturl&#34; data-url=&#34;bWFpbHRvOmdpdEBnaXRodWIuY29t&#34;&gt;git@github.com&lt;/span&gt;”]&lt;br&gt;
+insteadOf = &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tLzo=&#34;&gt;https://github.com/:&lt;/span&gt;&lt;br&gt;
+[url “git://”]&lt;br&gt;
+insteadOf = https://&lt;br&gt;
+[url “https://”]&lt;br&gt;
+insteadOf = git://&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;百度好久都找不到 焦躁哦&lt;/p&gt;
+&lt;/blockquote&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

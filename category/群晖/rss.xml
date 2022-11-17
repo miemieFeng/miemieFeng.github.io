@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>咩咩君 • Posts by &#34;群晖&#34; category</title>
+        <link>http://miemieFeng.github.io</link>
+        <description>coding日常</description>
+        <language>zh-CN</language>
+        <pubDate>Wed, 09 Feb 2022 09:41:28 +0800</pubDate>
+        <lastBuildDate>Wed, 09 Feb 2022 09:41:28 +0800</lastBuildDate>
+        <category>前端</category>
+        <category>git</category>
+        <category>java</category>
+        <category>springboot</category>
+        <category>后端</category>
+        <category>nginx</category>
+        <category>旁路由</category>
+        <category>服务器</category>
+        <category>hexo</category>
+        <category>game</category>
+        <category>cron插件</category>
+        <category>群晖</category>
+        <category>python</category>
+        <item>
+            <guid isPermalink="true">http://miemiefeng.github.io/%E4%BD%BF%E7%94%A8%E9%BB%91%E7%BE%A4%E6%99%96%E6%90%AD%E5%BB%BA%E6%97%81%E8%B7%AF%E7%94%B1/</guid>
+            <title>使用黑群晖搭建旁路由</title>
+            <link>http://miemiefeng.github.io/%E4%BD%BF%E7%94%A8%E9%BB%91%E7%BE%A4%E6%99%96%E6%90%AD%E5%BB%BA%E6%97%81%E8%B7%AF%E7%94%B1/</link>
+            <category>旁路由</category>
+            <pubDate>Wed, 09 Feb 2022 09:41:28 +0800</pubDate>
+            <description><![CDATA[ &lt;blockquote&gt;
+&lt;p&gt;家里购置了 switch 自然是需要全家富强才可以更舒适的使用&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;一-安装虚拟机套件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#一-安装虚拟机套件&#34;&gt;#&lt;/a&gt; 一、安装虚拟机套件&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;这里我选择安装旧版虚拟机套件，因为新版需要 vip 才可以开启 cpu 兼容&lt;/strong&gt;&lt;br&gt;
+&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/miemieFeng/blogImg/Blogs/image-602efa6a1b774c4397f317bbb091fcc0.png&#34; alt=&#34;image-602efa6a1b774c4397f317bbb091fcc0&#34;&gt;&lt;br&gt;
+ 可以看到我这里安装了 2.31 版&lt;/p&gt;
+&lt;h3 id=&#34;二-下载旁路由镜像&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#二-下载旁路由镜像&#34;&gt;#&lt;/a&gt; 二、下载旁路由镜像&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;这里我选择下载恩山大佬第一的镜像，下载地址 https://openwrt.mpdn.fun:8443&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;三-导入镜像&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#三-导入镜像&#34;&gt;#&lt;/a&gt; 三、导入镜像&lt;/h3&gt;
+&lt;p&gt;打开虚拟机软件，选择新增，导入 pc 镜像&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/miemieFeng/blogImg/Blogs/20221116192456.png&#34; alt=&#34;20221116192456&#34;&gt; 等待上传完毕即可&lt;/p&gt;
+&lt;h3 id=&#34;四-启动镜像&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#四-启动镜像&#34;&gt;#&lt;/a&gt; 四、启动镜像&lt;/h3&gt;
+&lt;p&gt;首先选择虚拟机 - 导入&lt;br&gt;
+&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/miemieFeng/blogImg/Blogs/20221116192548.png&#34; alt=&#34;20221116192548&#34;&gt;&lt;br&gt;
+ 导入刚才上传的镜像&lt;br&gt;
+ 1、然后启动并连接。在跳出来的窗口界面输入命令，vi etc/config/network ，修改一下软路由的 IP。&lt;br&gt;
+2、在 option ipaddr 后面把 IP 修改成为和主路由一个网段的，可以按 i 键进行修改，比如我设置成 192.1168。1.10，修改完后按 Esc 退出，接着输入命令 ：wq ，保存刚才的修改。&lt;br&gt;
+3、再输入 passwd 修改一下密码，修改的时候密码不会显示，不用担心，输完按回车就行，要连续输入两次。&lt;br&gt;
+4、最后输入命令 reboot 进行重启就 OK 了。&lt;br&gt;
+5、在浏览器输入刚才咱们修改过的 IP，这时候已经可以进入 Openwrt 的登陆界面了，填上自己设置的密码就可以进系统了&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/miemieFeng/blogImg/Blogs/20221116192621.png&#34; alt=&#34;20221116192621&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;五-openwrt系统配置&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#五-openwrt系统配置&#34;&gt;#&lt;/a&gt; 五、Openwrt 系统配置&lt;/h3&gt;
+&lt;p&gt;系统装完了，要想正常使用还得配置一下，找到左侧菜单 网络 — 接口，选择 LAN 的接口进行修改。&lt;br&gt;
+&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/miemieFeng/blogImg/Blogs/20221116192643.png&#34; alt=&#34;20221116192643&#34;&gt;&lt;br&gt;
+ 网关和 dns 填自己的网关（忽略此接口处打上勾，不让旁路由提供 DHCP 服务，避免和主路由冲突。）&lt;br&gt;
+&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/miemieFeng/blogImg/Blogs/20221116192705.png&#34; alt=&#34;20221116192705&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;六-修改上网设备ip&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#六-修改上网设备ip&#34;&gt;#&lt;/a&gt; 六、修改上网设备 ip&lt;/h3&gt;
+&lt;p&gt;此时将上网设备的 ip 和 dns 改为我们旁路由的地址即可，我这里是改了小米路由器做二级路由&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;此时连接了小米路由器的设备都可以通过旁路由来设置策略了&lt;/p&gt;
+&lt;/blockquote&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://miemiefeng.github.io/%E8%A7%A3%E5%86%B3%E7%BE%A4%E8%BE%89%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E5%90%8Essh%E8%BF%9E%E6%8E%A5%E5%87%BA%E7%8E%B0connection%20is%20closed%20by%20foreign%20host/</guid>
+            <title>解决 fatal:unable to connect to gitee.com:gitee.com[0:180.97.125.228]：errno=Unknown error</title>
+            <link>http://miemiefeng.github.io/%E8%A7%A3%E5%86%B3%E7%BE%A4%E8%BE%89%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E5%90%8Essh%E8%BF%9E%E6%8E%A5%E5%87%BA%E7%8E%B0connection%20is%20closed%20by%20foreign%20host/</link>
+            <category>群晖</category>
+            <pubDate>Thu, 23 Dec 2021 08:41:46 +0800</pubDate>
+            <description><![CDATA[ &lt;h3 id=&#34;上次内网穿透后发现在家里一直无法通过穿透服务器连接群辉ssh&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#上次内网穿透后发现在家里一直无法通过穿透服务器连接群辉ssh&#34;&gt;#&lt;/a&gt; 上次内网穿透后，发现在家里一直无法通过穿透服务器连接群辉 ssh&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/miemieFeng/blogImg/Blogs/20221116194141.png&#34; alt=&#34;20221116194141&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;后来发现是被群辉拉入了黑名单解除就可以了&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#后来发现是被群辉拉入了黑名单解除就可以了&#34;&gt;#&lt;/a&gt; 后来发现是被群辉拉入了黑名单，解除就可以了&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/miemieFeng/blogImg/Blogs/20221116194201.png&#34; alt=&#34;20221116194201&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;取消自动封锁，或者把 ip 移出来&lt;/p&gt;
+&lt;/blockquote&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://miemiefeng.github.io/%E9%BB%91%E7%BE%A4%E6%99%96frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</guid>
+            <title>黑群晖frp内网穿透</title>
+            <link>http://miemiefeng.github.io/%E9%BB%91%E7%BE%A4%E6%99%96frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</link>
+            <category>群晖</category>
+            <pubDate>Tue, 14 Dec 2021 13:48:58 +0800</pubDate>
+            <description><![CDATA[ &lt;blockquote&gt;
+&lt;p&gt;前段时间闲来无事，吧家里的旧笔记本改造成了黑群晖.&lt;br&gt;
+ 开通内网穿透踩了很多坑，特此记录一下&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;frp 分别有服务端 (frps) 和客户端 (frpc)&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;一-下面先说服务端&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#一-下面先说服务端&#34;&gt;#&lt;/a&gt; 一、下面先说服务端&lt;/h2&gt;
+&lt;p&gt;因为是第一次操作，所以没有使用 docker 管理。有时间一定要换成 docker&lt;/p&gt;
+&lt;h4 id=&#34;1-首先下载frp根据自己的系统选择&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1-首先下载frp根据自己的系统选择&#34;&gt;#&lt;/a&gt; 1、首先下载 frp（根据自己的系统选择）&lt;/h4&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;wget https://github.com/fatedier/frp/releases/download/v0.33.0/frp_0.33.0_linux_amd64.tar.gz&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;2-解压命令解压出来&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2-解压命令解压出来&#34;&gt;#&lt;/a&gt; 2、解压命令解压出来&lt;/h4&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;tar -zxvf frp_0.33.0_linux_amd64.tar.gz&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;3-进入-frp-目录&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#3-进入-frp-目录&#34;&gt;#&lt;/a&gt; 3、进入 frp 目录&lt;/h4&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;cd frp_0.33.0_linux_amd64&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;4-配置服务器端文件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#4-配置服务器端文件&#34;&gt;#&lt;/a&gt; 4、配置服务器端文件&lt;/h4&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;vi frps.ini&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;下面我把配置文件贴出来&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;[common]			#必填&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;bind_port = 1231  		#服务端口（可自定义）&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;vhost_http_port = 1232 		#访问端口（可自定义）&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;dashboard_port = 7500 		#dashboard 界面端口&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;dashboard_user = 账号		#登录 dashboard 用户名&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;dashboard_pwd = 密码		#登录 dashboard 密码&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;max_pool_count = 5		#最大连接池数量&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;authentication_timeout = 900	#超时验证时间&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;subdomain_host = 你的域名	#自定义二级域名（这里我用了我另一个备案的域名）&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[ssh]&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;listen_port = 6000 		#访问端口&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;auth_token = 123321		#用户身份认证&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;6-启动服务器端frps测试启动&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#6-启动服务器端frps测试启动&#34;&gt;#&lt;/a&gt; 6、启动服务器端 frps（测试启动）&lt;/h4&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;./frps -c ./frps.ini&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果没有报错，那么服务端的操作暂时完毕&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;二、开始说客户端（群晖端）&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;一开始群晖也是使用了和上边一样的操作，只是配置文件不同，后来发现一个弊端 ----&amp;gt; 每次重启群晖后，frpc 不会自启动。或者因为不可抗力因素，frpc 关闭了很不方便&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;1-下载docker套件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1-下载docker套件&#34;&gt;#&lt;/a&gt; 1、下载 docker 套件&lt;/h4&gt;
+&lt;p&gt;首先我们打开套件中心，搜索 docker 并安装。docker 应该算是黑群晖必备套件我就不细说了&lt;/p&gt;
+&lt;h4 id=&#34;2-下载frp&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2-下载frp&#34;&gt;#&lt;/a&gt; 2、下载 frp&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/miemieFeng/blogImg/Blogs/20221116194700.png&#34; alt=&#34;20221116194700&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;2-启动容器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2-启动容器&#34;&gt;#&lt;/a&gt; 2、启动容器&lt;/h3&gt;
+&lt;p&gt;映射 frpc 文件，容器内路径为 &lt;code&gt;/frp/frpc.ini&lt;/code&gt; ，容器外路径随意，自己选&lt;/p&gt;
+&lt;h4 id=&#34;3-修改配置文件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#3-修改配置文件&#34;&gt;#&lt;/a&gt; 3、修改配置文件&lt;/h4&gt;
+&lt;p&gt;一定要注意，我们的配置文件是 `frpc.ini，下面我把文件内容贴出来&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;29&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;[common]&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;server_addr = 服务端ip&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;server_port = 端口设置&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;auth_token = 随便设置&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;pool_count = 1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[ssh]&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;type = tcp&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;local_ip = 本地群晖ip&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;local_port = 22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;remote_port = 6000&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;use_compression = true&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;use_encryption = true&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[qh]			#如果有多个端口一定不能和下面的名字重复了&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;type = http&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;local_port = 5000&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;subdomain = qh		#这里一定是写你的二级域名前缀（坑点）&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[ql]&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;type = http&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;local_port = 5700&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;subdomain = ql&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[nl]&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;type = http&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;local_port = 5703&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;subdomain = nl&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[sn]&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;type = http&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;local_port = 8181&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;subdomain = sn&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;4-启动服务器端&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#4-启动服务器端&#34;&gt;#&lt;/a&gt; 4、启动服务器端&lt;/h4&gt;
+&lt;p&gt;群晖启动服务端，进入高级设置，选择停止后重启，并且一定要选择使用和 dockerhost 相同网络&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;此时如果容器没有无限容器那么说明已经是链接成功了，可以访问刚才自己配的地址去看，一定是域名加端口号访问。除非像我一样在服务端使用 nginx 分别反向代理&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;三-服务端frp后台运行&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#三-服务端frp后台运行&#34;&gt;#&lt;/a&gt; 三、服务端 frp 后台运行&lt;/h2&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;nohup ./frps -c ./frps.ini &amp;amp;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;最后贴上成果&lt;br&gt;
+&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/miemieFeng/blogImg/Blogs/20221116194719.png&#34; alt=&#34;20221116194719&#34;&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

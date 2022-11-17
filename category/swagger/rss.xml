@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>咩咩君 • Posts by &#34;swagger&#34; category</title>
+        <link>http://miemieFeng.github.io</link>
+        <description>coding日常</description>
+        <language>zh-CN</language>
+        <pubDate>Tue, 25 Jan 2022 17:18:32 +0800</pubDate>
+        <lastBuildDate>Tue, 25 Jan 2022 17:18:32 +0800</lastBuildDate>
+        <category>前端</category>
+        <category>git</category>
+        <category>java</category>
+        <category>springboot</category>
+        <category>后端</category>
+        <category>nginx</category>
+        <category>旁路由</category>
+        <category>服务器</category>
+        <category>hexo</category>
+        <category>game</category>
+        <category>cron插件</category>
+        <category>群晖</category>
+        <category>python</category>
+        <item>
+            <guid isPermalink="true">http://miemiefeng.github.io/swagger2%20%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3%E6%95%B4%E7%90%86/</guid>
+            <title>swagger2 常用注解整理</title>
+            <link>http://miemiefeng.github.io/swagger2%20%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3%E6%95%B4%E7%90%86/</link>
+            <category>后端</category>
+            <pubDate>Tue, 25 Jan 2022 17:18:32 +0800</pubDate>
+            <description><![CDATA[ &lt;blockquote&gt;
+&lt;p&gt;最近用到 swagger 想着整理一下常用注解 (只能说是真的不好用，写一堆注解头痛)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;36&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;@Api：用在请求的类上，表示对类的说明&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    tags=&amp;quot;说明该类的作用，可以在UI界面上看到的注解&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    value=&amp;quot;该参数没什么意义，在UI界面上也看到，所以不需要配置&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;@ApiOperation：用在请求的方法上，说明方法的用途、作用&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    value=&amp;quot;说明方法的用途、作用&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    notes=&amp;quot;方法的备注说明&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;@ApiImplicitParams：用在请求的方法上，表示一组参数说明&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    @ApiImplicitParam：用在@ApiImplicitParams注解中，指定一个请求参数的各个方面&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        name：参数名&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        value：参数的汉字说明、解释&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        required：参数是否必须传&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        paramType：参数放在哪个地方&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            · header --&amp;gt; 请求参数的获取：@RequestHeader&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            · query --&amp;gt; 请求参数的获取：@RequestParam&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            · path（用于restful接口）--&amp;gt; 请求参数的获取：@PathVariable&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            · body（不常用）&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            · form（不常用）    &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        dataType：参数类型，默认String，其它值dataType=&amp;quot;Integer&amp;quot;       &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        defaultValue：参数的默认值&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;@ApiResponses：用在请求的方法上，表示一组响应&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    @ApiResponse：用在@ApiResponses中，一般用于表达一个错误的响应信息&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        code：数字，例如400&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        message：信息，例如&amp;quot;请求参数没填好&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        response：抛出异常的类&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;@ApiModel：用于响应类上，表示一个返回响应数据的信息&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            （这种一般用在post创建的时候，使用@RequestBody这样的场景，&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            请求参数无法使用@ApiImplicitParam注解进行描述的时候）&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    @ApiModelProperty：用在属性上，描述响应类的属性&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;1-api&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1-api&#34;&gt;#&lt;/a&gt; 1、@Api&lt;/h3&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;@Api(tags=&amp;quot;APP用户注册Controller&amp;quot;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;@Api：用在请求的类上，说明该类的作用&lt;br&gt;
+ tags=“说明该类的作用”&lt;br&gt;
+value=“该参数没什么意义，所以不需要配置”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;2-apioperation&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2-apioperation&#34;&gt;#&lt;/a&gt; 2、@ApiOperation&lt;/h3&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;@ApiOperation(value=&amp;quot;用户登录&amp;quot;,notes=&amp;quot;填写账号密码都是必填&amp;quot;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;@ApiOperation：用在请求的方法上，说明方法的作用&lt;br&gt;
+ @ApiOperation：“用在请求的方法上，说明方法的作用”&lt;br&gt;
+value=“说明方法的作用”&lt;br&gt;
+notes=“方法的备注说明”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;3-apiimplicitparams和apiimplicitparam这两个用的比较多&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#3-apiimplicitparams和apiimplicitparam这两个用的比较多&#34;&gt;#&lt;/a&gt; &lt;strong&gt;3、@ApiImplicitParams 和 @ApiImplicitParam&lt;/strong&gt; 这两个用的比较多&lt;/h3&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;@ApiImplicitParams(&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    @ApiImplicitParam(name=&amp;quot;mobile&amp;quot;,value=&amp;quot;手机号&amp;quot;,required=true,paramType=&amp;quot;form&amp;quot;),&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    @ApiImplicitParam(name=&amp;quot;password&amp;quot;,value=&amp;quot;密码&amp;quot;,required=true,paramType=&amp;quot;form&amp;quot;),&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    @ApiImplicitParam(name=&amp;quot;age&amp;quot;,value=&amp;quot;年龄&amp;quot;,required=true,paramType=&amp;quot;form&amp;quot;,dataType=&amp;quot;Integer&amp;quot;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;//@ApiImplicitParams：用在请求的方法上，包含一组参数说明&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;     //@ApiImplicitParams：用在请求的方法上，包含一组参数说明&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;     //@ApiImplicitParam：用在 @ApiImplicitParams 注解中，指定一个请求参数的配置信息       &lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;@ApiImplicitParams：用在请求的方法上，包含一组参数说明&lt;br&gt;
+ @ApiImplicitParams：用在请求的方法上，包含一组参数说明&lt;br&gt;
+ @ApiImplicitParam：用在 @ApiImplicitParams 注解中，指定一个请求参数的配置信息&lt;br&gt;
+ name：参数名&lt;br&gt;
+ value：参数的汉字说明、解释&lt;br&gt;
+ required：参数是否必须传&lt;br&gt;
+ paramType：参数放在哪个地方&lt;br&gt;
+・header --&amp;gt; 请求参数的获取：@RequestHeader&lt;br&gt;
+・query --&amp;gt; 请求参数的获取：@RequestParam&lt;br&gt;
+・path（用于 restful 接口）–&amp;gt; 请求参数的获取：@PathVariable&lt;br&gt;
+・body（不常用）&lt;br&gt;
+・form（不常用）&lt;br&gt;
+dataType：参数类型，默认 String，其它值 dataType=“Integer”&lt;br&gt;
+defaultValue：参数的默认值&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;4-apiresponses&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#4-apiresponses&#34;&gt;#&lt;/a&gt; 4、@ApiResponses&lt;/h3&gt;
+&lt;p&gt;@ApiOperation (value = “select1 请求”,notes = “多个参数，多种的查询参数类型”)&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;@ApiResponses(&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    @ApiResponse(code=400,message=&amp;quot;请求参数没填好&amp;quot;),&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    @ApiResponse(code=404,message=&amp;quot;请求路径没有或页面跳转路径不对&amp;quot;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;@ApiResponses：用于请求的方法上，表示一组响应&lt;br&gt;
+ @ApiResponses：用于请求的方法上，表示一组响应&lt;br&gt;
+ @ApiResponse：用在 @ApiResponses 中，一般用于表达一个错误的响应信息&lt;br&gt;
+ code：数字，例如 400&lt;br&gt;
+message：信息，例如 &amp;quot;请求参数没填好&amp;quot;&lt;br&gt;
+response：抛出异常的类&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;5-apimodel&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#5-apimodel&#34;&gt;#&lt;/a&gt; 5、@ApiModel&lt;/h3&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;@ApiModel(description= &amp;quot;返回响应数据&amp;quot;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;public class RestMessage implements Serializable&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    @ApiModelProperty(value = &amp;quot;是否成功&amp;quot;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    private boolean success=true;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    @ApiModelProperty(value = &amp;quot;返回对象&amp;quot;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    private Object data;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    @ApiModelProperty(value = &amp;quot;错误编号&amp;quot;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    private Integer errCode;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    @ApiModelProperty(value = &amp;quot;错误信息&amp;quot;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    private String message;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;@ApiModel：用于响应类上，表示一个返回响应数据的信息&lt;br&gt;
+ @ApiModel：用于响应类上，表示一个返回响应数据的信息&lt;br&gt;
+（这种一般用在 post 创建的时候，使用 @RequestBody 这样的场景，&lt;br&gt;
+请求参数无法使用 @ApiImplicitParam 注解进行描述的时候）&lt;br&gt;
+@ApiModelProperty：用在属性上，描述响应类的属性&lt;/p&gt;
+&lt;/blockquote&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

@@ -1,0 +1,18 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "咩咩君 • All posts by \"服务器\" tag",
+    "description": "coding日常",
+    "home_page_url": "http://miemieFeng.github.io",
+    "items": [
+        {
+            "id": "http://miemiefeng.github.io/%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6nginx%E6%8A%A5%E9%94%99(413%20Request%20Entity%20Too%20Large)/",
+            "url": "http://miemiefeng.github.io/%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6nginx%E6%8A%A5%E9%94%99(413%20Request%20Entity%20Too%20Large)/",
+            "title": "上传文件nginx报错(413 Request Entity Too Large)",
+            "date_published": "2021-12-22T05:15:55.000Z",
+            "content_html": "<blockquote>\n<p>部署舔狗日记的时候发现，字体文件太大无法上传.</p>\n</blockquote>\n<p>这可能是由于 Nginx 的上传大小限制所导致的。<br>\n可以在 Nginx 的配置文件下的 http 节点加入 client_max_body_size 1024m<br>\n 就解决了<br>\n<img data-src=\"https://cdn.jsdelivr.net/gh/miemieFeng/blogImg/Blogs/20221116194510.png\" alt=\"20221116194510\"></p>\n",
+            "tags": [
+                "服务器"
+            ]
+        }
+    ]
+}

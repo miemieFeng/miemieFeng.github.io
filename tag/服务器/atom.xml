@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://miemieFeng.github.io</id>
+    <title>咩咩君 • Posts by &#34;服务器&#34; tag</title>
+    <link href="http://miemieFeng.github.io" />
+    <updated>2021-12-22T05:15:55.000Z</updated>
+    <category term="前端" />
+    <category term="git" />
+    <category term="java" />
+    <category term="springboot" />
+    <category term="后端" />
+    <category term="nginx" />
+    <category term="旁路由" />
+    <category term="服务器" />
+    <category term="hexo" />
+    <category term="game" />
+    <category term="cron插件" />
+    <category term="群晖" />
+    <category term="python" />
+    <entry>
+        <id>http://miemiefeng.github.io/%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6nginx%E6%8A%A5%E9%94%99(413%20Request%20Entity%20Too%20Large)/</id>
+        <title>上传文件nginx报错(413 Request Entity Too Large)</title>
+        <link rel="alternate" href="http://miemiefeng.github.io/%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6nginx%E6%8A%A5%E9%94%99(413%20Request%20Entity%20Too%20Large)/"/>
+        <content type="html">&lt;blockquote&gt;
+&lt;p&gt;部署舔狗日记的时候发现，字体文件太大无法上传.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这可能是由于 Nginx 的上传大小限制所导致的。&lt;br&gt;
+可以在 Nginx 的配置文件下的 http 节点加入 client_max_body_size 1024m&lt;br&gt;
+ 就解决了&lt;br&gt;
+&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/miemieFeng/blogImg/Blogs/20221116194510.png&#34; alt=&#34;20221116194510&#34;&gt;&lt;/p&gt;
+</content>
+        <category term="服务器" />
+        <updated>2021-12-22T05:15:55.000Z</updated>
+    </entry>
+</feed>

@@ -1,0 +1,18 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "咩咩君 • All posts by \"nginx\" tag",
+    "description": "coding日常",
+    "home_page_url": "http://miemieFeng.github.io",
+    "items": [
+        {
+            "id": "http://miemiefeng.github.io/nginx%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/",
+            "url": "http://miemiefeng.github.io/nginx%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/",
+            "title": "nginx的安装与配置",
+            "date_published": "2021-11-17T05:30:04.000Z",
+            "content_html": "<h4 id=\"一-nginx的安装\"><a class=\"markdownIt-Anchor\" href=\"#一-nginx的安装\">#</a> 一、nginx 的安装</h4>\n<p>最近正好申请了 ssl 证书寻思重新配置一下 nginx，做个记录。</p>\n<h5 id=\"1-安装\"><a class=\"markdownIt-Anchor\" href=\"#1-安装\">#</a> 1、安装</h5>\n<p>这里我选择下载安装包，所以先创建 nginx 的默认目录。</p>\n<p>一般是放在 <code>/usr/local</code>  下</p>\n<blockquote>\n<p>以下操作在 <code>/user/local</code>  进行<br>\n本次下载非最新版，可自行更改版本号</p>\n</blockquote>\n<figure class=\"highlight sh\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">wget -c https://nginx.org/download/nginx-1.10.1.tar.gz</span><br></pre></td></tr></table></figure>\n<h5 id=\"2-解压安装包\"><a class=\"markdownIt-Anchor\" href=\"#2-解压安装包\">#</a> 2、解压安装包</h5>\n<figure class=\"highlight sh\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">tar -zxvf nginx-1.10.1.tar.gz</span><br></pre></td></tr></table></figure>\n<h5 id=\"3-安装\"><a class=\"markdownIt-Anchor\" href=\"#3-安装\">#</a> 3、安装</h5>\n<p>进入解压后的文件夹</p>\n<blockquote>\n<p>这里我们使用默认配置</p>\n</blockquote>\n<figure class=\"highlight sh\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">./configure</span><br></pre></td></tr></table></figure>\n<h5 id=\"4-编译安装\"><a class=\"markdownIt-Anchor\" href=\"#4-编译安装\">#</a> 4、编译安装</h5>\n<figure class=\"highlight sh\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">make</span><br><span class=\"line\">make install</span><br></pre></td></tr></table></figure>\n<h5 id=\"5-启动nginx\"><a class=\"markdownIt-Anchor\" href=\"#5-启动nginx\">#</a> 5、启动 nginx</h5>\n<p>此时返回上一级目录便可看到 nginx 文件夹<br>\n进入 /usr/local/nginx/sbin<br>\n<img data-src=\"https://cdn.jsdelivr.net/gh/miemieFeng/blogImg/Blogs/20221116195150.png\" alt=\"20221116195150\"><br>\n 输入 <code>./nginx</code>  即可启动 nginx</p>\n<figure class=\"highlight sh\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br><span class=\"line\">3</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">./nginx <span class=\"comment\">#启动nginx</span></span><br><span class=\"line\">./nginx -s quit <span class=\"comment\">#关闭nginx</span></span><br><span class=\"line\">./nginx -s reload <span class=\"comment\">#重启nginx</span></span><br></pre></td></tr></table></figure>\n<h4 id=\"二-配置nginx\"><a class=\"markdownIt-Anchor\" href=\"#二-配置nginx\">#</a> 二、配置 nginx</h4>\n<p>进入 /usr/local/nginx/conf</p>\n<figure class=\"highlight sh\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">vim nginx.conf</span><br></pre></td></tr></table></figure>\n<p>修改自己所需要的配置即可</p>\n",
+            "tags": [
+                "nginx"
+            ]
+        }
+    ]
+}

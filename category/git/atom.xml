@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://miemieFeng.github.io</id>
+    <title>咩咩君 • Posts by &#34;git&#34; category</title>
+    <link href="http://miemieFeng.github.io" />
+    <updated>2022-01-10T03:35:51.000Z</updated>
+    <category term="前端" />
+    <category term="git" />
+    <category term="java" />
+    <category term="springboot" />
+    <category term="后端" />
+    <category term="nginx" />
+    <category term="旁路由" />
+    <category term="服务器" />
+    <category term="hexo" />
+    <category term="game" />
+    <category term="cron插件" />
+    <category term="群晖" />
+    <category term="python" />
+    <entry>
+        <id>http://miemiefeng.github.io/%20%E8%A7%A3%E5%86%B3%20fatal:%20unable%20to%20connect%20to%20gitee.com:%20gitee.com[0:%20180.97.125.228]:%20errno=Unknown%20error/</id>
+        <title>解决fatal:unable to connect to gitee.com:gitee.com[0:180.97.125.228]:errno=Unknown error</title>
+        <link rel="alternate" href="http://miemiefeng.github.io/%20%E8%A7%A3%E5%86%B3%20fatal:%20unable%20to%20connect%20to%20gitee.com:%20gitee.com[0:%20180.97.125.228]:%20errno=Unknown%20error/"/>
+        <content type="html">&lt;p&gt;fatal: unable to connect to &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2dpdGVlLmNvbQ==&#34;&gt;gitee.com&lt;/span&gt;:&lt;br&gt;
+&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2dpdGVlLmNvbQ==&#34;&gt;gitee.com&lt;/span&gt;[0: 180.97.125.228]: errno=Unknown error&lt;/p&gt;
+&lt;p&gt;直接找到.gitconfig 文件，把这几个配置删掉，就可以正常 push 了&lt;/p&gt;
+&lt;p&gt;[url “&lt;span class=&#34;exturl&#34; data-url=&#34;bWFpbHRvOmdpdEBnaXRodWIuY29t&#34;&gt;git@github.com&lt;/span&gt;”]&lt;br&gt;
+insteadOf = &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tLzo=&#34;&gt;https://github.com/:&lt;/span&gt;&lt;br&gt;
+[url “git://”]&lt;br&gt;
+insteadOf = https://&lt;br&gt;
+[url “https://”]&lt;br&gt;
+insteadOf = git://&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;百度好久都找不到 焦躁哦&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+        <category term="git" />
+        <updated>2022-01-10T03:35:51.000Z</updated>
+    </entry>
+</feed>

@@ -1,0 +1,18 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "咩咩君 • All posts by \"python\" tag",
+    "description": "coding日常",
+    "home_page_url": "http://miemieFeng.github.io",
+    "items": [
+        {
+            "id": "http://miemiefeng.github.io/python%E6%89%93%E5%8C%85exe,%E5%B0%86%E5%86%B0%E5%A2%A9%E5%A2%A9%E9%80%81%E7%BB%99%E4%BD%A0%E7%88%B1%E7%9A%84%E4%BA%BA/",
+            "url": "http://miemiefeng.github.io/python%E6%89%93%E5%8C%85exe,%E5%B0%86%E5%86%B0%E5%A2%A9%E5%A2%A9%E9%80%81%E7%BB%99%E4%BD%A0%E7%88%B1%E7%9A%84%E4%BA%BA/",
+            "title": "python打包exe,将冰墩墩送给你爱的人",
+            "date_published": "2022-02-10T03:35:02.000Z",
+            "content_html": "<blockquote>\n<p>最近大家都有冰墩墩，抢不到就去 github 拉一个</p>\n</blockquote>\n<h3 id=\"一-拉项目略\"><a class=\"markdownIt-Anchor\" href=\"#一-拉项目略\">#</a> 一、拉项目（略）</h3>\n<h3 id=\"二-pip安装pyinstaller\"><a class=\"markdownIt-Anchor\" href=\"#二-pip安装pyinstaller\">#</a> 二、pip 安装 pyinstaller</h3>\n<pre><code>pip3 install pyinstaller\n</code></pre>\n<h3 id=\"三-使用pyinstaller打包成exe发送给你爱的人\"><a class=\"markdownIt-Anchor\" href=\"#三-使用pyinstaller打包成exe发送给你爱的人\">#</a> 三、使用 pyinstaller 打包成 exe 发送给你爱的人</h3>\n<p>打包命令</p>\n<figure class=\"highlight plaintext\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br><span class=\"line\">3</span><br><span class=\"line\">4</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">Pyinstaller -F setup.py 打包exe</span><br><span class=\"line\">Pyinstaller -F -w setup.py 不带控制台的打包</span><br><span class=\"line\">Pyinstaller -F -i xx.ico setup.py 打包指定exe图标打包</span><br><span class=\"line\"></span><br></pre></td></tr></table></figure>\n<p><img data-src=\"http://47.108.248.23:8090/upload/2022/02/b7701875be59fa6a2651cbab82b319b-fcc39472663d4237b693d39ede0bad43.png\" alt=\"b7701875be59fa6a2651cbab82b319b.png\"></p>\n<h3 id=\"成果\"><a class=\"markdownIt-Anchor\" href=\"#成果\">#</a> 成果</h3>\n<p><img data-src=\"http://47.108.248.23:8090/upload/2022/02/image-5773bb8dbb3b4e5084dcd4affcd21a36.png\" alt=\"image.png\"></p>\n",
+            "tags": [
+                "python"
+            ]
+        }
+    ]
+}

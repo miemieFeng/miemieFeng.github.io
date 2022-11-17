@@ -1,959 +1,915 @@
 
 
+
+
 <!DOCTYPE html>
-<html lang="zh-CN" data-default-color-scheme=auto>
-
-
-
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/icon.png">
-  <link rel="icon" href="/img/icon.png">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  
-  <meta name="theme-color" content="#2f4154">
-  <meta name="author" content="冯咩咩">
-  <meta name="keywords" content="">
-  
-    <meta name="description" content="coding日常">
-<meta property="og:type" content="website">
-<meta property="og:title" content="七月的藏宝图">
-<meta property="og:url" content="http://miemiefeng.github.io/index.html">
-<meta property="og:site_name" content="七月的藏宝图">
-<meta property="og:description" content="coding日常">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:author" content="冯咩咩">
-<meta name="twitter:card" content="summary_large_image">
-  
-  
-  
-  <title>七月的藏宝图</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
 
-  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
 
 
+<link rel="alternate" type="application/rss+xml" title="咩咩君" href="http://miemiefeng.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="咩咩君" href="http://miemiefeng.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="咩咩君" href="http://miemiefeng.github.io/feed.json" />
 
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-
-<!-- 主题依赖的图标库，不要自行修改 -->
-<!-- Do not modify the link that theme dependent icons -->
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
-
-
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
-
-
-<link  rel="stylesheet" href="/css/main.css" />
-
-
-  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
-  
-    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
-  
-
-
-
-
-  <script id="fluid-configs">
-    var Fluid = window.Fluid || {};
-    Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"miemiefeng.github.io","root":"/","version":"1.9.3","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
-
-    if (CONFIG.web_analytics.follow_dnt) {
-      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
-      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
-    }
-  </script>
-  <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
-  
-
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
 
   
+  <meta name="keywords" content="coding,java" />
+
+
+<link rel="canonical" href="http://miemiefeng.github.io/">
+
+
+
+  <title>咩咩君 = 咩咩君</title>
 <meta name="generator" content="Hexo 5.4.2"></head>
-
-
-<body>
-  
-
-  <header>
-    
-
-<div class="header-inner" style="height: 100vh;">
-  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
-  <div class="container">
-    <a class="navbar-brand" href="/">
-      <strong>咩咩君</strong>
-    </a>
-
-    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="animated-icon"><span></span><span></span><span></span></div>
-    </button>
-
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto text-center">
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/">
-                <i class="iconfont icon-home-fill"></i>
-                首页
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/archives/">
-                <i class="iconfont icon-archive-fill"></i>
-                归档
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/categories/">
-                <i class="iconfont icon-category-fill"></i>
-                分类
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/tags/">
-                <i class="iconfont icon-tags-fill"></i>
-                标签
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/about/">
-                <i class="iconfont icon-user-fill"></i>
-                关于
-              </a>
-            </li>
-          
-        
-        
-          <li class="nav-item" id="search-btn">
-            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
-            </a>
-          </li>
-          
-        
-        
-          <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
-                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
-          </li>
-        
-      </ul>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
     </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+            <a href="/" class="logo" rel="start"><p class="artboard">咩咩君</p>
+              <h1 itemprop="name headline" class="title">咩咩君</h1>
+            </a>
+          
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">咩咩君</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
   </div>
 </nav>
 
-  
-
-<div id="banner" class="banner" parallax=true
-     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
-  <div class="full-bg-img">
-    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-      <div class="banner-text text-center fade-in-up">
-        <div class="h2">
-          
-            <span id="subtitle" data-typed-text="coding日常"></span>
-          
-        </div>
-
-        
       </div>
-
-      
-        <div class="scroll-down-bar">
-          <i class="iconfont icon-arrowdown"></i>
-        </div>
-      
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipetlbztpj20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giclhpw3lwj20zk0m8gvw.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giclfb3vzhj20zk0m8wny.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gicitht3xtj20zk0m8k5v.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipexj2jgzj20zk0m8b09.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipetfk5zwj20zk0m8e81.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
     </div>
-  </div>
-</div>
-
-</div>
-
-  </header>
-
-  <main>
-    
-      <div class="container nopadding-x-md">
-        <div id="board"
-          style="margin-top: 0">
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
           
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
-
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+  <div class="index wrap">
+    <h2 class="divider">文章列表</h2>
+    <div class="segments posts">
         
-        <a href="/python%E6%89%93%E5%8C%85exe,%E5%B0%86%E5%86%B0%E5%A2%A9%E5%A2%A9%E9%80%81%E7%BB%99%E4%BD%A0%E7%88%B1%E7%9A%84%E4%BA%BA/" target="_self">
-          python打包exe,将冰墩墩送给你爱的人
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/python%E6%89%93%E5%8C%85exe,%E5%B0%86%E5%86%B0%E5%A2%A9%E5%A2%A9%E9%80%81%E7%BB%99%E4%BD%A0%E7%88%B1%E7%9A%84%E4%BA%BA/" target="_self">
-        <div>
-          最近大家都有冰墩墩，抢不到就去 github 拉一个  # 一、拉项目（略） # 二、pip 安装 pyinstaller pip3 install pyinstaller  # 三、使用 pyinstaller 打包成 exe 发送给你爱的人 打包命令 1234Pyinstaller -F setup.py 打包exePyinstaller -F -w setup.py 不带控制台的打包Pyi
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-02-10 11:35" pubdate>
-              2022-02-10
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/python/" class="category-chain-item">python</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/python/">#python</a>
-            
-          </div>
-        
-      </div>
-    </article>
+<article class="item">
+  <div class="cover">
+    <a href="/python%E6%89%93%E5%8C%85exe,%E5%B0%86%E5%86%B0%E5%A2%A9%E5%A2%A9%E9%80%81%E7%BB%99%E4%BD%A0%E7%88%B1%E7%9A%84%E4%BA%BA/" itemprop="url" title="python打包exe,将冰墩墩送给你爱的人"><img data-src="https://tva4.sinaimg.cn/mw690/6833939bly1gipewkhf1zj20zk0m81kx.jpg"></a>
   </div>
-
-  <div class="row mx-auto index-card">
+  <div class="info">
     
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/%E4%BD%BF%E7%94%A8%E9%BB%91%E7%BE%A4%E6%99%96%E6%90%AD%E5%BB%BA%E6%97%81%E8%B7%AF%E7%94%B1/" target="_self">
-          使用黑群晖搭建旁路由
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/%E4%BD%BF%E7%94%A8%E9%BB%91%E7%BE%A4%E6%99%96%E6%90%AD%E5%BB%BA%E6%97%81%E8%B7%AF%E7%94%B1/" target="_self">
-        <div>
-          家里购置了 switch 自然是需要全家富强才可以更舒适的使用  # 一、安装虚拟机套件 这里我选择安装旧版虚拟机套件，因为新版需要 vip 才可以开启 cpu 兼容   可以看到我这里安装了 2.31 版 # 二、下载旁路由镜像 这里我选择下载恩山大佬第一的镜像，下载地址 https://openwrt.mpdn.fun:8443 # 三、导入镜像 打开虚拟机软件，选择新增，导入 pc 镜像
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-02-09 09:41" pubdate>
-              2022-02-09
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E7%BE%A4%E6%99%96/" class="category-chain-item">群晖</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E6%97%81%E8%B7%AF%E7%94%B1/">#旁路由</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/swagger2%20%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3%E6%95%B4%E7%90%86/" target="_self">
-          swagger2 常用注解整理
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/swagger2%20%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3%E6%95%B4%E7%90%86/" target="_self">
-        <div>
-          最近用到 swagger 想着整理一下常用注解 (只能说是真的不好用，写一堆注解头痛)  123456789101112131415161718192021222324252627282930313233343536@Api：用在请求的类上，表示对类的说明    tags=&quot;说明该类的作用，可以在UI界面上看到的注解&quot;    value=&quot;该参数没什么意义，在UI界
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-01-25 17:18" pubdate>
-              2022-01-25
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/swagger/" class="category-chain-item">swagger</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E5%90%8E%E7%AB%AF/">#后端</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/layui%E4%BD%BF%E7%94%A8%E5%AF%8C%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8%E5%B9%B6%E5%9B%9E%E6%98%BE/" target="_self">
-          layui使用富文本编辑器并回显
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/layui%E4%BD%BF%E7%94%A8%E5%AF%8C%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8%E5%B9%B6%E5%9B%9E%E6%98%BE/" target="_self">
-        <div>
-          正好要做一个文章管理，记录一下遇到的坑  1. 引入富文本编辑器 12345678var layedit = layui.layedit;layedit.set(&#123;	uploadImage: &#123;		url: &#x27;/v1/openApi/uploadImage&#x27; //接口url		,type: &#x27;&#x27; //默认post	&#125;&#125
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-01-21 16:34" pubdate>
-              2022-01-21
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/layui/" class="category-chain-item">layui</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E5%89%8D%E7%AB%AF/">#前端</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/%20%E8%A7%A3%E5%86%B3%20fatal:%20unable%20to%20connect%20to%20gitee.com:%20gitee.com%5B0:%20180.97.125.228%5D:%20errno=Unknown%20error/" target="_self">
-          解决fatal:unable to connect to gitee.com:gitee.com[0:180.97.125.228]:errno=Unknown error
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/%20%E8%A7%A3%E5%86%B3%20fatal:%20unable%20to%20connect%20to%20gitee.com:%20gitee.com%5B0:%20180.97.125.228%5D:%20errno=Unknown%20error/" target="_self">
-        <div>
-          fatal: unable to connect to gitee.com: gitee.com[0: 180.97.125.228]: errno=Unknown error 直接找到.gitconfig 文件，把这几个配置删掉，就可以正常 push 了 [url “git@github.com”] insteadOf = https://github.com/: [url “git://”]
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-01-10 11:35" pubdate>
-              2022-01-10
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/git/" class="category-chain-item">git</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/git/">#git</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/uni-app%E5%B0%81%E8%A3%85%E5%85%AC%E5%85%B1%E8%AF%B7%E6%B1%82(%E6%90%BA%E5%B8%A6token)/" target="_self">
-          uni-app封装公共请求(携带token)
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/uni-app%E5%B0%81%E8%A3%85%E5%85%AC%E5%85%B1%E8%AF%B7%E6%B1%82(%E6%90%BA%E5%B8%A6token)/" target="_self">
-        <div>
-          在日常开发过程中，一般请求我们都会携带 token, 以保证安全性  # 1、在工程目录下新建个 common 文件夹 在 common 目录下新增 request.js 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-12-24 13:21" pubdate>
-              2021-12-24
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/uni-app/" class="category-chain-item">uni-app</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E5%89%8D%E7%AB%AF/">#前端</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/%E8%A7%A3%E5%86%B3%E7%BE%A4%E8%BE%89%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E5%90%8Essh%E8%BF%9E%E6%8E%A5%E5%87%BA%E7%8E%B0connection%20is%20closed%20by%20foreign%20host/" target="_self">
-          解决 fatal:unable to connect to gitee.com:gitee.com[0:180.97.125.228]：errno=Unknown error
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/%E8%A7%A3%E5%86%B3%E7%BE%A4%E8%BE%89%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E5%90%8Essh%E8%BF%9E%E6%8E%A5%E5%87%BA%E7%8E%B0connection%20is%20closed%20by%20foreign%20host/" target="_self">
-        <div>
-          # 上次内网穿透后，发现在家里一直无法通过穿透服务器连接群辉 ssh  # 后来发现是被群辉拉入了黑名单，解除就可以了   取消自动封锁，或者把 ip 移出来
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-12-23 08:41" pubdate>
-              2021-12-23
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E7%BE%A4%E6%99%96/" class="category-chain-item">群晖</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E7%BE%A4%E6%99%96/">#群晖</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6nginx%E6%8A%A5%E9%94%99(413%20Request%20Entity%20Too%20Large)/" target="_self">
-          上传文件nginx报错(413 Request Entity Too Large)
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6nginx%E6%8A%A5%E9%94%99(413%20Request%20Entity%20Too%20Large)/" target="_self">
-        <div>
-          部署舔狗日记的时候发现，字体文件太大无法上传.  这可能是由于 Nginx 的上传大小限制所导致的。 可以在 Nginx 的配置文件下的 http 节点加入 client_max_body_size 1024m  就解决了
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-12-22 13:15" pubdate>
-              2021-12-22
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/NGINX/" class="category-chain-item">NGINX</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">#服务器</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/%E9%BB%91%E7%BE%A4%E6%99%96frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" target="_self">
-          黑群晖frp内网穿透
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/%E9%BB%91%E7%BE%A4%E6%99%96frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" target="_self">
-        <div>
-          前段时间闲来无事，吧家里的旧笔记本改造成了黑群晖.  开通内网穿透踩了很多坑，特此记录一下  frp 分别有服务端 (frps) 和客户端 (frpc) # 一、下面先说服务端 因为是第一次操作，所以没有使用 docker 管理。有时间一定要换成 docker # 1、首先下载 frp（根据自己的系统选择） 1wget https://github.com/fatedier/frp/releas
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-12-14 13:48" pubdate>
-              2021-12-14
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E7%BE%A4%E6%99%96/" class="category-chain-item">群晖</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E7%BE%A4%E6%99%96/">#群晖</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/%E6%88%91%E7%9A%84%E4%BB%BB%E5%8A%A1%E6%97%B6%E9%97%B4%E6%88%91%E5%81%9A%E4%B8%BB(cron%E6%8F%92%E4%BB%B6)/" target="_self">
-          我的任务时间我做主(cron插件)
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/%E6%88%91%E7%9A%84%E4%BB%BB%E5%8A%A1%E6%97%B6%E9%97%B4%E6%88%91%E5%81%9A%E4%B8%BB(cron%E6%8F%92%E4%BB%B6)/" target="_self">
-        <div>
-          # 先说一下插件怎么使用 # 1、点击浏览器右上角  # 2、打开开发者模式  # 3、拖入下载的压缩包即可使用啦  github 地址：cron 插件  # 下面说下浏览器插件的核心文件（manifest.json）  这个文件必须要有  12345678910111213141516171819202122232425262728293031323334&#123;		// 清单文件的版本，这
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-12-03 14:04" pubdate>
-              2021-12-03
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/cron%E6%8F%92%E4%BB%B6/" class="category-chain-item">cron插件</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/cron%E6%8F%92%E4%BB%B6/">#cron插件</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-
-
-  <nav aria-label="navigation">
-    <span class="pagination" id="pagination">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/#board">2</a><a class="extend next" rel="next" href="/page/2/#board"><i class="iconfont icon-arrowright"></i></a>
+<div class="meta">
+  <span class="item" title="创建时间：2022-02-10 11:35:02">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
     </span>
+    <time itemprop="dateCreated datePublished" datetime="2022-02-10T11:35:02+08:00">2022-02-10</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>211</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/python%E6%89%93%E5%8C%85exe,%E5%B0%86%E5%86%B0%E5%A2%A9%E5%A2%A9%E9%80%81%E7%BB%99%E4%BD%A0%E7%88%B1%E7%9A%84%E4%BA%BA/" itemprop="url" title="python打包exe,将冰墩墩送给你爱的人">python打包exe,将冰墩墩送给你爱的人</a></h3>
+    <div class="excerpt">
+        最近大家都有冰墩墩，抢不到就去 github 拉一个
+
+# 一、拉项目（略）
+# 二、pip 安装 pyinstaller
+pip3 install pyinstaller
+
+# 三、使用 pyinstaller 打包成 exe 发送给你爱的人
+打包命令
+1234Pyinstaller -F setup.py 打包exePyinstaller -F -w setup.py 不带控制台的打包Pyinstaller -F -i xx.ico setup.py 打包指定exe图标打包
+
+# 成果
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/python/" itemprop="url" title="python"><i class="ic i-flag"></i>python</a>
+      </span>
+    </div>
+    <a href="/python%E6%89%93%E5%8C%85exe,%E5%B0%86%E5%86%B0%E5%A2%A9%E5%A2%A9%E9%80%81%E7%BB%99%E4%BD%A0%E7%88%B1%E7%9A%84%E4%BA%BA/" itemprop="url" title="python打包exe,将冰墩墩送给你爱的人" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/%E4%BD%BF%E7%94%A8%E9%BB%91%E7%BE%A4%E6%99%96%E6%90%AD%E5%BB%BA%E6%97%81%E8%B7%AF%E7%94%B1/" itemprop="url" title="使用黑群晖搭建旁路由"><img data-src="https://tva4.sinaimg.cn/mw690/6833939bly1gicljitigmj20zk0m87fp.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2022-02-09 09:41:28">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2022-02-09T09:41:28+08:00">2022-02-09</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>675</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/%E4%BD%BF%E7%94%A8%E9%BB%91%E7%BE%A4%E6%99%96%E6%90%AD%E5%BB%BA%E6%97%81%E8%B7%AF%E7%94%B1/" itemprop="url" title="使用黑群晖搭建旁路由">使用黑群晖搭建旁路由</a></h3>
+    <div class="excerpt">
+        家里购置了 switch 自然是需要全家富强才可以更舒适的使用
+
+# 一、安装虚拟机套件
+这里我选择安装旧版虚拟机套件，因为新版需要 vip 才可以开启 cpu 兼容
+
+可以看到我这里安装了 2.31 版
+# 二、下载旁路由镜像
+这里我选择下载恩山大佬第一的镜像，下载地址 https://openwrt.mpdn.fun:8443
+# 三、导入镜像
+打开虚拟机软件，选择新增，导入 pc 镜像 等待上传完毕即可
+# 四、启动镜像
+首先选择虚拟机 - 导入
+
+导入刚才上传的镜像
+1、然后启动并连接。在跳出来的窗口界面输入命令，vi etc/config/network ，修改一下软路由的...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/%E7%BE%A4%E6%99%96/" itemprop="url" title="群晖"><i class="ic i-flag"></i>群晖</a>
+      </span>
+    </div>
+    <a href="/%E4%BD%BF%E7%94%A8%E9%BB%91%E7%BE%A4%E6%99%96%E6%90%AD%E5%BB%BA%E6%97%81%E8%B7%AF%E7%94%B1/" itemprop="url" title="使用黑群晖搭建旁路由" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/swagger2%20%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3%E6%95%B4%E7%90%86/" itemprop="url" title="swagger2 常用注解整理"><img data-src="https://tva4.sinaimg.cn/mw690/6833939bly1gipey84bjtj20zk0m8hdt.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2022-01-25 17:18:32">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2022-01-25T17:18:32+08:00">2022-01-25</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>3.1k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>3 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/swagger2%20%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3%E6%95%B4%E7%90%86/" itemprop="url" title="swagger2 常用注解整理">swagger2 常用注解整理</a></h3>
+    <div class="excerpt">
+        最近用到 swagger 想着整理一下常用注解 (只能说是真的不好用，写一堆注解头痛)
+
+123456789101112131415161718192021222324252627282930313233343536@Api：用在请求的类上，表示对类的说明 tags=&amp;quot;说明该类的作用，可以在UI界面上看到的注解&amp;quot; value=&amp;quot;该参数没什么意义，在UI界面上也看到，所以不需要配置&amp;quot; @ApiOperation：用在请求的方法上，说明方法的用途、作用 value=&amp;quot;说明方法的用途、作用&amp;quot;...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/swagger/" itemprop="url" title="swagger"><i class="ic i-flag"></i>swagger</a>
+      </span>
+    </div>
+    <a href="/swagger2%20%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3%E6%95%B4%E7%90%86/" itemprop="url" title="swagger2 常用注解整理" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/layui%E4%BD%BF%E7%94%A8%E5%AF%8C%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8%E5%B9%B6%E5%9B%9E%E6%98%BE/" itemprop="url" title="layui使用富文本编辑器并回显"><img data-src="https://tva4.sinaimg.cn/mw690/6833939bly1gicitht3xtj20zk0m8k5v.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2022-01-21 16:34:39">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2022-01-21T16:34:39+08:00">2022-01-21</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>674</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/layui%E4%BD%BF%E7%94%A8%E5%AF%8C%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8%E5%B9%B6%E5%9B%9E%E6%98%BE/" itemprop="url" title="layui使用富文本编辑器并回显">layui使用富文本编辑器并回显</a></h3>
+    <div class="excerpt">
+        正好要做一个文章管理，记录一下遇到的坑
+
+1. 引入富文本编辑器
+12345678var layedit = layui.layedit;layedit.set(&amp;#123;	uploadImage: &amp;#123;		url: &amp;#x27;/v1/openApi/uploadImage&amp;#x27; //接口url		,type: &amp;#x27;&amp;#x27; //默认post	&amp;#125;&amp;#125;);var index =...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/layui/" itemprop="url" title="layui"><i class="ic i-flag"></i>layui</a>
+      </span>
+    </div>
+    <a href="/layui%E4%BD%BF%E7%94%A8%E5%AF%8C%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8%E5%B9%B6%E5%9B%9E%E6%98%BE/" itemprop="url" title="layui使用富文本编辑器并回显" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/%20%E8%A7%A3%E5%86%B3%20fatal:%20unable%20to%20connect%20to%20gitee.com:%20gitee.com%5B0:%20180.97.125.228%5D:%20errno=Unknown%20error/" itemprop="url" title="解决fatal:unable to connect to gitee.com:gitee.com[0:180.97.125.228]:errno&#x3D;Unknown error"><img data-src="https://tva4.sinaimg.cn/mw690/6833939bly1gicitzannuj20zk0m8b29.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2022-01-10 11:35:51">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2022-01-10T11:35:51+08:00">2022-01-10</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>239</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/%20%E8%A7%A3%E5%86%B3%20fatal:%20unable%20to%20connect%20to%20gitee.com:%20gitee.com%5B0:%20180.97.125.228%5D:%20errno=Unknown%20error/" itemprop="url" title="解决fatal:unable to connect to gitee.com:gitee.com[0:180.97.125.228]:errno&#x3D;Unknown error">解决fatal:unable to connect to gitee.com:gitee.com[0:180.97.125.228]:errno=Unknown error</a></h3>
+    <div class="excerpt">
+        fatal: unable to connect to gitee.com:
+gitee.com[0: 180.97.125.228]: errno=Unknown error
+直接找到.gitconfig 文件，把这几个配置删掉，就可以正常 push 了
+[url “git@github.com”]
+insteadOf = https://github.com/:
+[url “git://”]
+insteadOf = https://
+[url “https://”]
+insteadOf = git://
+
+百度好久都找不到 焦躁哦
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/git/" itemprop="url" title="git"><i class="ic i-flag"></i>git</a>
+      </span>
+    </div>
+    <a href="/%20%E8%A7%A3%E5%86%B3%20fatal:%20unable%20to%20connect%20to%20gitee.com:%20gitee.com%5B0:%20180.97.125.228%5D:%20errno=Unknown%20error/" itemprop="url" title="解决fatal:unable to connect to gitee.com:gitee.com[0:180.97.125.228]:errno&#x3D;Unknown error" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/uni-app%E5%B0%81%E8%A3%85%E5%85%AC%E5%85%B1%E8%AF%B7%E6%B1%82(%E6%90%BA%E5%B8%A6token)/" itemprop="url" title="uni-app封装公共请求(携带token)"><img data-src="https://tva4.sinaimg.cn/mw690/6833939bly1gipetfk5zwj20zk0m8e81.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2021-12-24 13:21:40">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2021-12-24T13:21:40+08:00">2021-12-24</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>2k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>2 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/uni-app%E5%B0%81%E8%A3%85%E5%85%AC%E5%85%B1%E8%AF%B7%E6%B1%82(%E6%90%BA%E5%B8%A6token)/" itemprop="url" title="uni-app封装公共请求(携带token)">uni-app封装公共请求(携带token)</a></h3>
+    <div class="excerpt">
+        在日常开发过程中，一般请求我们都会携带 token, 以保证安全性
+
+# 1、在工程目录下新建个 common 文件夹
+在 common 目录下新增 request.js
+1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071//请求函数const request = (url = &amp;#x27;&amp;#x27;, data =...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/uni-app/" itemprop="url" title="uni-app"><i class="ic i-flag"></i>uni-app</a>
+      </span>
+    </div>
+    <a href="/uni-app%E5%B0%81%E8%A3%85%E5%85%AC%E5%85%B1%E8%AF%B7%E6%B1%82(%E6%90%BA%E5%B8%A6token)/" itemprop="url" title="uni-app封装公共请求(携带token)" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/%E8%A7%A3%E5%86%B3%E7%BE%A4%E8%BE%89%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E5%90%8Essh%E8%BF%9E%E6%8E%A5%E5%87%BA%E7%8E%B0connection%20is%20closed%20by%20foreign%20host/" itemprop="url" title="解决 fatal:unable to connect to gitee.com:gitee.com[0:180.97.125.228]：errno&#x3D;Unknown error"><img data-src="https://tva4.sinaimg.cn/mw690/6833939bly1gipeuibk9fj20zk0m8ay2.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2021-12-23 08:41:46">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2021-12-23T08:41:46+08:00">2021-12-23</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>69</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/%E8%A7%A3%E5%86%B3%E7%BE%A4%E8%BE%89%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E5%90%8Essh%E8%BF%9E%E6%8E%A5%E5%87%BA%E7%8E%B0connection%20is%20closed%20by%20foreign%20host/" itemprop="url" title="解决 fatal:unable to connect to gitee.com:gitee.com[0:180.97.125.228]：errno&#x3D;Unknown error">解决 fatal:unable to connect to gitee.com:gitee.com[0:180.97.125.228]：errno=Unknown error</a></h3>
+    <div class="excerpt">
+        # 上次内网穿透后，发现在家里一直无法通过穿透服务器连接群辉 ssh
+
+# 后来发现是被群辉拉入了黑名单，解除就可以了
+
+取消自动封锁，或者把 ip 移出来
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/%E7%BE%A4%E6%99%96/" itemprop="url" title="群晖"><i class="ic i-flag"></i>群晖</a>
+      </span>
+    </div>
+    <a href="/%E8%A7%A3%E5%86%B3%E7%BE%A4%E8%BE%89%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E5%90%8Essh%E8%BF%9E%E6%8E%A5%E5%87%BA%E7%8E%B0connection%20is%20closed%20by%20foreign%20host/" itemprop="url" title="解决 fatal:unable to connect to gitee.com:gitee.com[0:180.97.125.228]：errno&#x3D;Unknown error" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6nginx%E6%8A%A5%E9%94%99(413%20Request%20Entity%20Too%20Large)/" itemprop="url" title="上传文件nginx报错(413 Request Entity Too Large)"><img data-src="https://tva4.sinaimg.cn/mw690/6833939bly1giclflwv2aj20zk0m84qp.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2021-12-22 13:15:55">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2021-12-22T13:15:55+08:00">2021-12-22</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>98</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6nginx%E6%8A%A5%E9%94%99(413%20Request%20Entity%20Too%20Large)/" itemprop="url" title="上传文件nginx报错(413 Request Entity Too Large)">上传文件nginx报错(413 Request Entity Too Large)</a></h3>
+    <div class="excerpt">
+        部署舔狗日记的时候发现，字体文件太大无法上传.
+
+这可能是由于 Nginx 的上传大小限制所导致的。
+可以在 Nginx 的配置文件下的 http 节点加入 client_max_body_size 1024m
+就解决了
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/NGINX/" itemprop="url" title="NGINX"><i class="ic i-flag"></i>NGINX</a>
+      </span>
+    </div>
+    <a href="/%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6nginx%E6%8A%A5%E9%94%99(413%20Request%20Entity%20Too%20Large)/" itemprop="url" title="上传文件nginx报错(413 Request Entity Too Large)" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/%E9%BB%91%E7%BE%A4%E6%99%96frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" itemprop="url" title="黑群晖frp内网穿透"><img data-src="https://tva4.sinaimg.cn/mw690/6833939bly1giclwuom7cj20zk0m8dvn.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2021-12-14 13:48:58">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2021-12-14T13:48:58+08:00">2021-12-14</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>1.6k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/%E9%BB%91%E7%BE%A4%E6%99%96frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" itemprop="url" title="黑群晖frp内网穿透">黑群晖frp内网穿透</a></h3>
+    <div class="excerpt">
+        前段时间闲来无事，吧家里的旧笔记本改造成了黑群晖.
+开通内网穿透踩了很多坑，特此记录一下
+
+frp 分别有服务端 (frps) 和客户端 (frpc)
+# 一、下面先说服务端
+因为是第一次操作，所以没有使用 docker 管理。有时间一定要换成 docker
+# 1、首先下载 frp（根据自己的系统选择）
+1wget https://github.com/fatedier/frp/releases/download/v0.33.0/frp_0.33.0_linux_amd64.tar.gz
+# 2、解压命令解压出来
+1tar -zxvf...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/%E7%BE%A4%E6%99%96/" itemprop="url" title="群晖"><i class="ic i-flag"></i>群晖</a>
+      </span>
+    </div>
+    <a href="/%E9%BB%91%E7%BE%A4%E6%99%96frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" itemprop="url" title="黑群晖frp内网穿透" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/%E6%88%91%E7%9A%84%E4%BB%BB%E5%8A%A1%E6%97%B6%E9%97%B4%E6%88%91%E5%81%9A%E4%B8%BB(cron%E6%8F%92%E4%BB%B6)/" itemprop="url" title="我的任务时间我做主(cron插件)"><img data-src="https://tva4.sinaimg.cn/mw690/6833939bly1giclgrvbd6j20zk0m8qv5.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2021-12-03 14:04:40">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2021-12-03T14:04:40+08:00">2021-12-03</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>992</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/%E6%88%91%E7%9A%84%E4%BB%BB%E5%8A%A1%E6%97%B6%E9%97%B4%E6%88%91%E5%81%9A%E4%B8%BB(cron%E6%8F%92%E4%BB%B6)/" itemprop="url" title="我的任务时间我做主(cron插件)">我的任务时间我做主(cron插件)</a></h3>
+    <div class="excerpt">
+        # 先说一下插件怎么使用
+# 1、点击浏览器右上角
+
+# 2、打开开发者模式
+
+# 3、拖入下载的压缩包即可使用啦
+
+github 地址：cron 插件
+
+# 下面说下浏览器插件的核心文件（manifest.json）
+
+这个文件必须要有
+
+12345678910111213141516171819202122232425262728293031323334&amp;#123;		// 清单文件的版本，这个必须写，而且必须是2	&amp;quot;manifest_version&amp;quot;: 2,	// 插件的名称	&amp;quot;name&amp;quot;:...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/cron%E6%8F%92%E4%BB%B6/" itemprop="url" title="cron插件"><i class="ic i-flag"></i>cron插件</a>
+      </span>
+    </div>
+    <a href="/%E6%88%91%E7%9A%84%E4%BB%BB%E5%8A%A1%E6%97%B6%E9%97%B4%E6%88%91%E5%81%9A%E4%B8%BB(cron%E6%8F%92%E4%BB%B6)/" itemprop="url" title="我的任务时间我做主(cron插件)" class="btn">more...</a>
+  </div>
+</article>
+
+    </div>
+
+  </div>
+
+  
+  <nav class="pagination">
+    <div class="inner">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="ic i-angle-right" aria-label="下一页"></i></a>
+    </div>
   </nav>
 
 
 
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-    
+        <div id="sidebar">
+          
+<div class="inner">
 
-    
-      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
-        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="冯咩咩"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">冯咩咩</p>
+  <div class="description" itemprop="description">coding日常</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">15</span>
+        <span class="name">文章</span>
       </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">16</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">13</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL21pZW1pZUZlbmc=" title="https:&#x2F;&#x2F;github.com&#x2F;miemieFeng"><i class="ic i-github"></i></span>
+      <span class="exturl item weibo" data-url="aHR0cHM6Ly93ZWliby5jb20vdS81NDQyNDYzNTY3" title="https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;5442463567"><i class="ic i-weibo"></i></span>
+</div>
+
+<ul class="menu">
+  
     
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
 
     
-      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
-        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
-        </div>
-        <div class="list-group" id="local-search-result"></div>
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+
+</ul>
+
       </div>
     </div>
   </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/page/2/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
 </div>
 
-    
-
-    
-  </main>
-
-  <footer>
-    <div class="footer-inner">
-  
-    <div class="footer-content">
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
       
-
-    </div>
-  
-  
-  
-  
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/NGINX/" title="分类于 NGINX">NGINX</a>
 </div>
 
-  </footer>
+    <span><a href="/%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6nginx%E6%8A%A5%E9%94%99(413%20Request%20Entity%20Too%20Large)/" title="上传文件nginx报错(413 Request Entity Too Large)">上传文件nginx报错(413 Request Entity Too Large)</a></span>
+  </li>
 
-  <!-- Scripts -->
-  
-  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
-  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/layui/" title="分类于 layui">layui</a>
+</div>
 
-  <script>
-    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
-    NProgress.start()
-    window.addEventListener('load', function() {
-      NProgress.done();
-    })
-  </script>
+    <span><a href="/layui%E4%BD%BF%E7%94%A8%E5%AF%8C%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8%E5%B9%B6%E5%9B%9E%E6%98%BE/" title="layui使用富文本编辑器并回显">layui使用富文本编辑器并回显</a></span>
+  </li>
 
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/git/" title="分类于 git">git</a>
+</div>
 
-<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
-<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="/js/events.js" ></script>
-<script  src="/js/plugins.js" ></script>
+    <span><a href="/%20%E8%A7%A3%E5%86%B3%20fatal:%20unable%20to%20connect%20to%20gitee.com:%20gitee.com%5B0:%20180.97.125.228%5D:%20errno=Unknown%20error/" title="解决fatal:unable to connect to gitee.com:gitee.com[0:180.97.125.228]:errno&#x3D;Unknown error">解决fatal:unable to connect to gitee.com:gitee.com[0:180.97.125.228]:errno=Unknown error</a></span>
+  </li>
 
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%BE%A4%E6%99%96/" title="分类于 群晖">群晖</a>
+</div>
 
-  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
-  <script>
-    (function (window, document) {
-      var typing = Fluid.plugins.typing;
-      var subtitle = document.getElementById('subtitle');
-      if (!subtitle || !typing) {
-        return;
+    <span><a href="/%E9%BB%91%E7%BE%A4%E6%99%96frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" title="黑群晖frp内网穿透">黑群晖frp内网穿透</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/uni-app/" title="分类于 uni-app">uni-app</a>
+</div>
+
+    <span><a href="/uni-app%E5%B0%81%E8%A3%85%E5%85%AC%E5%85%B1%E8%AF%B7%E6%B1%82(%E6%90%BA%E5%B8%A6token)/" title="uni-app封装公共请求(携带token)">uni-app封装公共请求(携带token)</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%BE%A4%E6%99%96/" title="分类于 群晖">群晖</a>
+</div>
+
+    <span><a href="/%E8%A7%A3%E5%86%B3%E7%BE%A4%E8%BE%89%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E5%90%8Essh%E8%BF%9E%E6%8E%A5%E5%87%BA%E7%8E%B0connection%20is%20closed%20by%20foreign%20host/" title="解决 fatal:unable to connect to gitee.com:gitee.com[0:180.97.125.228]：errno&#x3D;Unknown error">解决 fatal:unable to connect to gitee.com:gitee.com[0:180.97.125.228]：errno=Unknown error</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/swagger/" title="分类于 swagger">swagger</a>
+</div>
+
+    <span><a href="/swagger2%20%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3%E6%95%B4%E7%90%86/" title="swagger2 常用注解整理">swagger2 常用注解整理</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/java/" title="分类于 java">java</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/springboot/" title="分类于 springboot">springboot</a>
+</div>
+
+    <span><a href="/SpringBoot%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%92%8C%E4%B8%8B%E8%BD%BD/" title="SpringBoot实现文件上传和下载">SpringBoot实现文件上传和下载</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/lol/" title="分类于 lol">lol</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/lol/pbe/" title="分类于 pbe">pbe</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/lol/pbe/game/" title="分类于 game">game</a>
+</div>
+
+    <span><a href="/%E8%8B%B1%E9%9B%84%E8%81%94%E7%9B%9F%E7%BE%8E%E6%B5%8B%E6%9C%8D%E6%B1%89%E5%8C%96/" title="英雄联盟美测服汉化">英雄联盟美测服汉化</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/cron%E6%8F%92%E4%BB%B6/" title="分类于 cron插件">cron插件</a>
+</div>
+
+    <span><a href="/%E6%88%91%E7%9A%84%E4%BB%BB%E5%8A%A1%E6%97%B6%E9%97%B4%E6%88%91%E5%81%9A%E4%B8%BB(cron%E6%8F%92%E4%BB%B6)/" title="我的任务时间我做主(cron插件)">我的任务时间我做主(cron插件)</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2022</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">冯咩咩 @ 咩咩君</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">38k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">34 分钟</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
       }
-      var text = subtitle.getAttribute('data-typed-text');
-      
-        typing(text);
-      
-    })(window, document);
-  </script>
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
 
 
 
 
-  
-    <script  src="/js/img-lazyload.js" ></script>
-  
-
-
-
-
-  <script  src="/js/local-search.js" ></script>
-
-
-
-
-
-<!-- 主题的启动项，将它保持在最底部 -->
-<!-- the boot of the theme, keep it at the bottom -->
-<script  src="/js/boot.js" ></script>
-
-
-  
-
-  <noscript>
-    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
-  </noscript>
 </body>
 </html>

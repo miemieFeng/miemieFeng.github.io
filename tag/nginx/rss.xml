@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>咩咩君 • Posts by &#34;nginx&#34; tag</title>
+        <link>http://miemieFeng.github.io</link>
+        <description>coding日常</description>
+        <language>zh-CN</language>
+        <pubDate>Wed, 17 Nov 2021 13:30:04 +0800</pubDate>
+        <lastBuildDate>Wed, 17 Nov 2021 13:30:04 +0800</lastBuildDate>
+        <category>前端</category>
+        <category>git</category>
+        <category>java</category>
+        <category>springboot</category>
+        <category>后端</category>
+        <category>nginx</category>
+        <category>旁路由</category>
+        <category>服务器</category>
+        <category>hexo</category>
+        <category>game</category>
+        <category>cron插件</category>
+        <category>群晖</category>
+        <category>python</category>
+        <item>
+            <guid isPermalink="true">http://miemiefeng.github.io/nginx%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/</guid>
+            <title>nginx的安装与配置</title>
+            <link>http://miemiefeng.github.io/nginx%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/</link>
+            <category>nginx</category>
+            <pubDate>Wed, 17 Nov 2021 13:30:04 +0800</pubDate>
+            <description><![CDATA[ &lt;h4 id=&#34;一-nginx的安装&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#一-nginx的安装&#34;&gt;#&lt;/a&gt; 一、nginx 的安装&lt;/h4&gt;
+&lt;p&gt;最近正好申请了 ssl 证书寻思重新配置一下 nginx，做个记录。&lt;/p&gt;
+&lt;h5 id=&#34;1-安装&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1-安装&#34;&gt;#&lt;/a&gt; 1、安装&lt;/h5&gt;
+&lt;p&gt;这里我选择下载安装包，所以先创建 nginx 的默认目录。&lt;/p&gt;
+&lt;p&gt;一般是放在 &lt;code&gt;/usr/local&lt;/code&gt;  下&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;以下操作在 &lt;code&gt;/user/local&lt;/code&gt;  进行&lt;br&gt;
+本次下载非最新版，可自行更改版本号&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&#34;highlight sh&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;wget -c https://nginx.org/download/nginx-1.10.1.tar.gz&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h5 id=&#34;2-解压安装包&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2-解压安装包&#34;&gt;#&lt;/a&gt; 2、解压安装包&lt;/h5&gt;
+&lt;figure class=&#34;highlight sh&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;tar -zxvf nginx-1.10.1.tar.gz&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h5 id=&#34;3-安装&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#3-安装&#34;&gt;#&lt;/a&gt; 3、安装&lt;/h5&gt;
+&lt;p&gt;进入解压后的文件夹&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这里我们使用默认配置&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&#34;highlight sh&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;./configure&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h5 id=&#34;4-编译安装&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#4-编译安装&#34;&gt;#&lt;/a&gt; 4、编译安装&lt;/h5&gt;
+&lt;figure class=&#34;highlight sh&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;make&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;make install&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h5 id=&#34;5-启动nginx&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#5-启动nginx&#34;&gt;#&lt;/a&gt; 5、启动 nginx&lt;/h5&gt;
+&lt;p&gt;此时返回上一级目录便可看到 nginx 文件夹&lt;br&gt;
+进入 /usr/local/nginx/sbin&lt;br&gt;
+&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/miemieFeng/blogImg/Blogs/20221116195150.png&#34; alt=&#34;20221116195150&#34;&gt;&lt;br&gt;
+ 输入 &lt;code&gt;./nginx&lt;/code&gt;  即可启动 nginx&lt;/p&gt;
+&lt;figure class=&#34;highlight sh&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;./nginx &lt;span class=&#34;comment&#34;&gt;#启动nginx&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;./nginx -s quit &lt;span class=&#34;comment&#34;&gt;#关闭nginx&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;./nginx -s reload &lt;span class=&#34;comment&#34;&gt;#重启nginx&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;二-配置nginx&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#二-配置nginx&#34;&gt;#&lt;/a&gt; 二、配置 nginx&lt;/h4&gt;
+&lt;p&gt;进入 /usr/local/nginx/conf&lt;/p&gt;
+&lt;figure class=&#34;highlight sh&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;vim nginx.conf&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;修改自己所需要的配置即可&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

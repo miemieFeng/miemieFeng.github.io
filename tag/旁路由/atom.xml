@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://miemieFeng.github.io</id>
+    <title>咩咩君 • Posts by &#34;旁路由&#34; tag</title>
+    <link href="http://miemieFeng.github.io" />
+    <updated>2022-02-09T01:41:28.000Z</updated>
+    <category term="前端" />
+    <category term="git" />
+    <category term="java" />
+    <category term="springboot" />
+    <category term="后端" />
+    <category term="nginx" />
+    <category term="旁路由" />
+    <category term="服务器" />
+    <category term="hexo" />
+    <category term="game" />
+    <category term="cron插件" />
+    <category term="群晖" />
+    <category term="python" />
+    <entry>
+        <id>http://miemiefeng.github.io/%E4%BD%BF%E7%94%A8%E9%BB%91%E7%BE%A4%E6%99%96%E6%90%AD%E5%BB%BA%E6%97%81%E8%B7%AF%E7%94%B1/</id>
+        <title>使用黑群晖搭建旁路由</title>
+        <link rel="alternate" href="http://miemiefeng.github.io/%E4%BD%BF%E7%94%A8%E9%BB%91%E7%BE%A4%E6%99%96%E6%90%AD%E5%BB%BA%E6%97%81%E8%B7%AF%E7%94%B1/"/>
+        <content type="html">&lt;blockquote&gt;
+&lt;p&gt;家里购置了 switch 自然是需要全家富强才可以更舒适的使用&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;一-安装虚拟机套件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#一-安装虚拟机套件&#34;&gt;#&lt;/a&gt; 一、安装虚拟机套件&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;这里我选择安装旧版虚拟机套件，因为新版需要 vip 才可以开启 cpu 兼容&lt;/strong&gt;&lt;br&gt;
+&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/miemieFeng/blogImg/Blogs/image-602efa6a1b774c4397f317bbb091fcc0.png&#34; alt=&#34;image-602efa6a1b774c4397f317bbb091fcc0&#34;&gt;&lt;br&gt;
+ 可以看到我这里安装了 2.31 版&lt;/p&gt;
+&lt;h3 id=&#34;二-下载旁路由镜像&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#二-下载旁路由镜像&#34;&gt;#&lt;/a&gt; 二、下载旁路由镜像&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;这里我选择下载恩山大佬第一的镜像，下载地址 https://openwrt.mpdn.fun:8443&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;三-导入镜像&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#三-导入镜像&#34;&gt;#&lt;/a&gt; 三、导入镜像&lt;/h3&gt;
+&lt;p&gt;打开虚拟机软件，选择新增，导入 pc 镜像&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/miemieFeng/blogImg/Blogs/20221116192456.png&#34; alt=&#34;20221116192456&#34;&gt; 等待上传完毕即可&lt;/p&gt;
+&lt;h3 id=&#34;四-启动镜像&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#四-启动镜像&#34;&gt;#&lt;/a&gt; 四、启动镜像&lt;/h3&gt;
+&lt;p&gt;首先选择虚拟机 - 导入&lt;br&gt;
+&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/miemieFeng/blogImg/Blogs/20221116192548.png&#34; alt=&#34;20221116192548&#34;&gt;&lt;br&gt;
+ 导入刚才上传的镜像&lt;br&gt;
+ 1、然后启动并连接。在跳出来的窗口界面输入命令，vi etc/config/network ，修改一下软路由的 IP。&lt;br&gt;
+2、在 option ipaddr 后面把 IP 修改成为和主路由一个网段的，可以按 i 键进行修改，比如我设置成 192.1168。1.10，修改完后按 Esc 退出，接着输入命令 ：wq ，保存刚才的修改。&lt;br&gt;
+3、再输入 passwd 修改一下密码，修改的时候密码不会显示，不用担心，输完按回车就行，要连续输入两次。&lt;br&gt;
+4、最后输入命令 reboot 进行重启就 OK 了。&lt;br&gt;
+5、在浏览器输入刚才咱们修改过的 IP，这时候已经可以进入 Openwrt 的登陆界面了，填上自己设置的密码就可以进系统了&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/miemieFeng/blogImg/Blogs/20221116192621.png&#34; alt=&#34;20221116192621&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;五-openwrt系统配置&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#五-openwrt系统配置&#34;&gt;#&lt;/a&gt; 五、Openwrt 系统配置&lt;/h3&gt;
+&lt;p&gt;系统装完了，要想正常使用还得配置一下，找到左侧菜单 网络 — 接口，选择 LAN 的接口进行修改。&lt;br&gt;
+&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/miemieFeng/blogImg/Blogs/20221116192643.png&#34; alt=&#34;20221116192643&#34;&gt;&lt;br&gt;
+ 网关和 dns 填自己的网关（忽略此接口处打上勾，不让旁路由提供 DHCP 服务，避免和主路由冲突。）&lt;br&gt;
+&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/miemieFeng/blogImg/Blogs/20221116192705.png&#34; alt=&#34;20221116192705&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;六-修改上网设备ip&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#六-修改上网设备ip&#34;&gt;#&lt;/a&gt; 六、修改上网设备 ip&lt;/h3&gt;
+&lt;p&gt;此时将上网设备的 ip 和 dns 改为我们旁路由的地址即可，我这里是改了小米路由器做二级路由&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;此时连接了小米路由器的设备都可以通过旁路由来设置策略了&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+        <category term="旁路由" />
+        <updated>2022-02-09T01:41:28.000Z</updated>
+    </entry>
+</feed>

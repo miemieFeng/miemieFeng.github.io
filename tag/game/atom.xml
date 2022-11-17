@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://miemieFeng.github.io</id>
+    <title>咩咩君 • Posts by &#34;game&#34; tag</title>
+    <link href="http://miemieFeng.github.io" />
+    <updated>2021-11-01T05:10:21.000Z</updated>
+    <category term="前端" />
+    <category term="git" />
+    <category term="java" />
+    <category term="springboot" />
+    <category term="后端" />
+    <category term="nginx" />
+    <category term="旁路由" />
+    <category term="服务器" />
+    <category term="hexo" />
+    <category term="game" />
+    <category term="cron插件" />
+    <category term="群晖" />
+    <category term="python" />
+    <entry>
+        <id>http://miemiefeng.github.io/%E8%8B%B1%E9%9B%84%E8%81%94%E7%9B%9F%E7%BE%8E%E6%B5%8B%E6%9C%8D%E6%B1%89%E5%8C%96/</id>
+        <title>英雄联盟美测服汉化</title>
+        <link rel="alternate" href="http://miemiefeng.github.io/%E8%8B%B1%E9%9B%84%E8%81%94%E7%9B%9F%E7%BE%8E%E6%B5%8B%E6%9C%8D%E6%B1%89%E5%8C%96/"/>
+        <content type="html">&lt;p&gt;第一步：首先第一步我们进入到 PBE 的原始文件夹里，找到 LOLPBE 的打开程序，然后右键发送桌面快捷方式&lt;/p&gt;
+&lt;p&gt;第二步：我们到桌面 右键属性 打开快捷方式&lt;/p&gt;
+&lt;p&gt;第三步，我们在目标后面添加：&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;--locale=zh_CN &lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;记住加个空格&lt;/p&gt;
+&lt;p class=&#34;note note-primary&#34;&gt;更改完成后会重新下载一些东西&lt;/p&gt;</content>
+        <category term="game" />
+        <updated>2021-11-01T05:10:21.000Z</updated>
+    </entry>
+</feed>
