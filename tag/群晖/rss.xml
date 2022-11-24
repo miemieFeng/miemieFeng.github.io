@@ -7,19 +7,19 @@
         <language>zh-CN</language>
         <pubDate>Thu, 23 Dec 2021 08:41:46 +0800</pubDate>
         <lastBuildDate>Thu, 23 Dec 2021 08:41:46 +0800</lastBuildDate>
-        <category>前端</category>
         <category>git</category>
+        <category>前端</category>
         <category>java</category>
         <category>springboot</category>
         <category>后端</category>
         <category>nginx</category>
+        <category>python</category>
         <category>旁路由</category>
-        <category>服务器</category>
         <category>hexo</category>
         <category>game</category>
         <category>cron插件</category>
+        <category>服务器</category>
         <category>群晖</category>
-        <category>python</category>
         <item>
             <guid isPermalink="true">http://miemiefeng.github.io/%E8%A7%A3%E5%86%B3%E7%BE%A4%E8%BE%89%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E5%90%8Essh%E8%BF%9E%E6%8E%A5%E5%87%BA%E7%8E%B0connection%20is%20closed%20by%20foreign%20host/</guid>
             <title>解决 fatal:unable to connect to gitee.com:gitee.com[0:180.97.125.228]：errno=Unknown error</title>

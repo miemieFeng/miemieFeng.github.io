@@ -7,19 +7,19 @@
         <language>zh-CN</language>
         <pubDate>Mon, 01 Nov 2021 13:10:21 +0800</pubDate>
         <lastBuildDate>Mon, 01 Nov 2021 13:10:21 +0800</lastBuildDate>
-        <category>前端</category>
         <category>git</category>
+        <category>前端</category>
         <category>java</category>
         <category>springboot</category>
         <category>后端</category>
         <category>nginx</category>
+        <category>python</category>
         <category>旁路由</category>
-        <category>服务器</category>
         <category>hexo</category>
         <category>game</category>
         <category>cron插件</category>
+        <category>服务器</category>
         <category>群晖</category>
-        <category>python</category>
         <item>
             <guid isPermalink="true">http://miemiefeng.github.io/%E8%8B%B1%E9%9B%84%E8%81%94%E7%9B%9F%E7%BE%8E%E6%B5%8B%E6%9C%8D%E6%B1%89%E5%8C%96/</guid>
             <title>英雄联盟美测服汉化</title>

@@ -7,19 +7,19 @@
         <language>zh-CN</language>
         <pubDate>Thu, 10 Feb 2022 11:35:02 +0800</pubDate>
         <lastBuildDate>Thu, 10 Feb 2022 11:35:02 +0800</lastBuildDate>
-        <category>前端</category>
         <category>git</category>
+        <category>前端</category>
         <category>java</category>
         <category>springboot</category>
         <category>后端</category>
         <category>nginx</category>
+        <category>python</category>
         <category>旁路由</category>
-        <category>服务器</category>
         <category>hexo</category>
         <category>game</category>
         <category>cron插件</category>
+        <category>服务器</category>
         <category>群晖</category>
-        <category>python</category>
         <item>
             <guid isPermalink="true">http://miemiefeng.github.io/python%E6%89%93%E5%8C%85exe,%E5%B0%86%E5%86%B0%E5%A2%A9%E5%A2%A9%E9%80%81%E7%BB%99%E4%BD%A0%E7%88%B1%E7%9A%84%E4%BA%BA/</guid>
             <title>python打包exe,将冰墩墩送给你爱的人</title>

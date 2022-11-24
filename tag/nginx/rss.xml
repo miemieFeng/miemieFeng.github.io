@@ -7,19 +7,19 @@
         <language>zh-CN</language>
         <pubDate>Wed, 17 Nov 2021 13:30:04 +0800</pubDate>
         <lastBuildDate>Wed, 17 Nov 2021 13:30:04 +0800</lastBuildDate>
-        <category>前端</category>
         <category>git</category>
+        <category>前端</category>
         <category>java</category>
         <category>springboot</category>
         <category>后端</category>
         <category>nginx</category>
+        <category>python</category>
         <category>旁路由</category>
-        <category>服务器</category>
         <category>hexo</category>
         <category>game</category>
         <category>cron插件</category>
+        <category>服务器</category>
         <category>群晖</category>
-        <category>python</category>
         <item>
             <guid isPermalink="true">http://miemiefeng.github.io/nginx%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/</guid>
             <title>nginx的安装与配置</title>

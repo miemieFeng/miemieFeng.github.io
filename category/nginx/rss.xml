@@ -7,19 +7,19 @@
         <language>zh-CN</language>
         <pubDate>Wed, 22 Dec 2021 13:15:55 +0800</pubDate>
         <lastBuildDate>Wed, 22 Dec 2021 13:15:55 +0800</lastBuildDate>
-        <category>前端</category>
         <category>git</category>
+        <category>前端</category>
         <category>java</category>
         <category>springboot</category>
         <category>后端</category>
         <category>nginx</category>
+        <category>python</category>
         <category>旁路由</category>
-        <category>服务器</category>
         <category>hexo</category>
         <category>game</category>
         <category>cron插件</category>
+        <category>服务器</category>
         <category>群晖</category>
-        <category>python</category>
         <item>
             <guid isPermalink="true">http://miemiefeng.github.io/%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6nginx%E6%8A%A5%E9%94%99(413%20Request%20Entity%20Too%20Large)/</guid>
             <title>上传文件nginx报错(413 Request Entity Too Large)</title>
